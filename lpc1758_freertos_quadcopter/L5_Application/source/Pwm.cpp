@@ -26,6 +26,15 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
     pid_roll_setpoint = 0;
     esc_1 = esc_2 = esc_3 = esc_4 = 0;
 
+    pid_p_gain_roll = pid_p_gain_pitch = 1.4;
+    pid_i_gain_roll = pid_i_gain_pitch = 0.05;
+    pid_d_gain_roll = pid_d_gain_pitch =15;
+
+    pid_p_gain_yaw = 4.0;
+    pid_i_gain_yaw = 0.02;
+    pid_d_gain_yaw = 0.0;
+
+
 }
 
 bool PWMTask::run(void *p)

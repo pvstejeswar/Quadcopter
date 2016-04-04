@@ -46,17 +46,17 @@ class PWMTask:public scheduler_task
         QueueHandle_t blth,gyro;
         PWM pwm1, pwm2, pwm3, pwm4;
 
-        static float pid_p_gain_roll = 1.4;
-        static float pid_i_gain_roll = 0.05;
-        static float pid_d_gain_roll = 15;
+        float pid_p_gain_roll;
+        float pid_i_gain_roll;
+        float pid_d_gain_roll;
 
-        static float pid_p_gain_pitch = pid_p_gain_roll;
-        static float pid_i_gain_pitch = pid_i_gain_roll;
-        static float pid_d_gain_pitch = pid_d_gain_roll;
+        float pid_p_gain_pitch;
+        float pid_i_gain_pitch;
+        float pid_d_gain_pitch;
 
-        float pid_p_gain_yaw = 4.0;
-        float pid_i_gain_yaw = 0.02;
-        float pid_d_gain_yaw = 0.0;
+        float pid_p_gain_yaw;
+        float pid_i_gain_yaw;
+        float pid_d_gain_yaw;
 
         float pid_i_mem_roll, pid_roll_setpoint, gyro_roll_input, pid_output_roll, pid_last_roll_d_error;
         float pid_i_mem_pitch, pid_pitch_setpoint, gyro_pitch_input, pid_output_pitch, pid_last_pitch_d_error;
