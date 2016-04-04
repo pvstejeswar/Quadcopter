@@ -18,15 +18,14 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
     pwm2value = 6;
     pwm3value = 6;
     pwm4value = 6;
-
 }
 
 bool PWMTask::run(void *p)
 {
-    char command[20] =
-    { 0 };
-    qh = getSharedObject(bluettothCommand);
-    if (!xQueueReceive(qh, command, portMAX_DELAY))
+    char command[20] = { 0 };
+    blth = getSharedObject(bluetoothCommand);
+
+    if (!xQueueReceive(blth, command, portMAX_DELAY))
     {
         puts("Failed to receive bluetooth command in 20 ms");
     }

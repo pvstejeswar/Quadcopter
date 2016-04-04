@@ -13,7 +13,7 @@ BluetoothTask::BluetoothTask(unsigned long rateHz, uint8_t priority):
 scheduler_task("Bluetooth", 3 * 512, priority),taskRateHz(rateHz),U3(Uart3::getInstance())
 {
     qh = xQueueCreate(1, 20);
-    addSharedObject(bluettothCommand,qh);
+    addSharedObject(bluetoothCommand,qh);
     setRunDuration(taskRateHz);
 }
 

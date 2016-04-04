@@ -75,6 +75,16 @@ protected:
         return ((MSB << 8) | (LSB & 0xFF));
     }
 
+    uint16_t get16BitRegister_I(unsigned char reg)
+        {
+            uint8_t buff[2] = {0};
+            mI2C.readRegisters(mOurAddr, reg, &buff[0], sizeof(buff));
+
+            const uint16_t MSB = buff[1];
+            const uint16_t LSB = buff[0];
+            return ((MSB << 8) | (LSB & 0xFF));
+        }
+
 private:
     I2C_Base& mI2C; /// Instance of I2C Bus used for communication
     const uint8_t mOurAddr; ///< I2C Address of this device

@@ -28,14 +28,27 @@ class BluetoothTask:public scheduler_task
 
 };
 
-class PWMTask:public scheduler_task
+class GyroTask:public scheduler_task
 {
         unsigned long taskRateHz;
         QueueHandle_t qh;
+
+    public:
+        GyroTask(unsigned long rateHz, uint8_t priority);
+        bool run(void*p);
+
+};
+
+
+class PWMTask:public scheduler_task
+{
+        unsigned long taskRateHz;
+        QueueHandle_t blth,gyro;
         PWM pwm1;
         PWM pwm2;
         PWM pwm3;
         PWM pwm4;
+
         float pwm1value;
         float pwm2value;
         float pwm3value;
@@ -49,14 +62,14 @@ class PWMTask:public scheduler_task
 };
 
 enum{
-    bluettothCommand,
+    bluetoothCommand,
+    gyroData,
     motorinit,
     motorstop,
     motorhover,
     motorup,
     motordown,
 };
-
 
 
 #endif /* L5_APPLICATION_SHARED_VARIABLES_H_ */

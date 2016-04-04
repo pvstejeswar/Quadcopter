@@ -36,12 +36,14 @@
 #include "light_sensor.hpp"
 #include "switches.hpp"
 #include "temperature_sensor.hpp"
+#include "MPU-9255.hpp"
 
 
 /**
  * @{ Short-hand notation of getting to the on-board IO Devices
  * @ingroup BoardIO
  */
+#define IMU     MPU_9255::getInstance()
 #define AS      Acceleration_Sensor::getInstance() ///< Acceleration Sensor
 #define IS      IR_Sensor::getInstance()           ///< IR input sensor
 #define LS      Light_Sensor::getInstance()        ///< Light Sensor
