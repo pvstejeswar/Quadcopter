@@ -10,17 +10,36 @@
 bool MPU_9255::init()
 {
     //Configuring the accelerometer, GYRO sensitivity
-    const unsigned char accel_sens = (1 << 4) | (1 << 3); //Reg 28: 00010000 = 8g - 16 in decimal
-    const unsigned char gyro_sens = (1 << 4); //Reg 28: 00010000 = 1000 dps - 16 in decimal
+    //const unsigned char accel_sens = (1 << 4) | (1 << 3); //Reg 28: 00011000 = +-16g  -- Sensitivity Factor -- 2048
+    const unsigned char accel_sens = 0;
+    unsigned char gyro_sens = (1 << 4); //Reg 27: 00010000 = 1000 dps -- Sensitivity factor -- 32.8
+    gyro_sens &=  ~(3 << 0);  // Do F_CHOICE bits[1:0] as zero
+    gyro_sens = 0;
+    unsigned char accel_lpf = 0, gyro_lpf = 0;
+
+    /* Set value 3 for first 3 bits [2:0]
+     *Output: 41 HZ BW, 19.80 Milli Sec delay */
+    accel_lpf |=  (3 << 0);
+
+    /*Set value 4 for first 3 bits [2:0]
+     *OUTPUT:  20 HZ BW, 9.9 Milli Seconds delay*/
+    gyro_lpf  |= (1 << 2);
+
 
     //write that value to reg 28
     writeReg(ACCEL_CONFIG, accel_sens);
     writeReg(GYRO_CONFIG, gyro_sens);
 
+    writeReg(ACCEL_CONFIG2, accel_lpf);
+    writeReg(CONFIG, gyro_lpf);
+
     //checking whether we are accessing our device
     const char whoAmIReg = readReg(WHO_AM_I);
 
     //if this gives 0x73 we are good
+
+    //u0_dbg_printf("\nWho ma i %d\n",whoAmIReg);
+    LD.setNumber(whoAmIReg);
     return (0x71 == whoAmIReg);   //Don't know how it is 0x71. I checked by passing the reg address.
 }
 

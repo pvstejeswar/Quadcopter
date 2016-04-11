@@ -60,8 +60,11 @@ class MPU_9255: private i2c2_device, public SingletonTemplate<MPU_9255>
             SELF_TEST_X_GYRO = 0x00,
             SELF_TEST_Y_GYRO = 0x01,
             SELF_TEST_Z_GYRO = 0x02, //Table - page 7
-            ACCEL_CONFIG = 0x1C,
+            CONFIG = 0X1A,        //Config Low Pass Filter for Gyro sensor
             GYRO_CONFIG = 0X1B,
+            ACCEL_CONFIG = 0x1C,
+            ACCEL_CONFIG2 = 0x1D,  //Config Low Pass Filter for Acc sensor
+
 
             //Accelerometer Values
             ACCEL_XOUT_H = 0x3B,
