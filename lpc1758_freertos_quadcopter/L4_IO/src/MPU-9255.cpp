@@ -14,6 +14,7 @@ bool MPU_9255::init()
 
     /*Calibrate for bias calculation*/
 
+
     //Configuring the accelerometer, GYRO sensitivity
     const unsigned char accel_sens = (1 << 4) | (1 << 3);//Reg 28: 00010000 = 8g - 16 in decimal
     const unsigned char gyro_sens = (1 << 4);//Reg 28: 00010000 = 1000 dps - 16 in decimal
