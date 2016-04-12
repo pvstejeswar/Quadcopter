@@ -85,6 +85,12 @@ protected:
             return ((MSB << 8) | (LSB & 0xFF));
         }
 
+    void readRegisters(unsigned char regaddr, unsigned char* data,int size)
+    {
+        mI2C.readRegisters(mOurAddr, regaddr, &data[0],2);
+    }
+
+
 private:
     I2C_Base& mI2C; /// Instance of I2C Bus used for communication
     const uint8_t mOurAddr; ///< I2C Address of this device
