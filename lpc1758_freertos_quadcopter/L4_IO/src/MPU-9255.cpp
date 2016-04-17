@@ -6,15 +6,12 @@
 #include <stdint.h>
 #include <io.hpp>
 #include <stdio.h>
+#include <utilities.h>
 
 bool MPU_9255::init()
 {
-    /*Reset the device*/
-    IMU.reset_9255();
 
-    /*Calibrate for bias calculation*/
-
-
+#if dheeraj
     //Configuring the accelerometer, GYRO sensitivity
     const unsigned char accel_sens = (1 << 4) | (1 << 3);//Reg 28: 00010000 = 8g - 16 in decimal
     const unsigned char gyro_sens = (1 << 4);//Reg 28: 00010000 = 1000 dps - 16 in decimal
@@ -28,7 +25,85 @@ bool MPU_9255::init()
 
     //if this gives 0x73 we are good
     return (0x71 == whoAmIReg);//Don't know how it is 0x71. I checked by passing the reg address.
-}
+#endif
+
+    const char who_am_i = readReg(WHO_AM_I);
+
+    if (who_am_i == 0x71) // WHO_AM_I should always be 0x68
+    {
+
+        /*Reset the device*/
+        IMU.reset_9255();
+
+
+        /*Calibrate for bias calculation*/
+        float gyroBias = 0, accelBias = 0;
+        IMU.calibrate_9255(&gyroBias, &accelBias);
+
+
+        //uint8_t Ascale = AFS_2G;     // AFS_2G, AFS_4G, AFS_8G, AFS_16G
+        //uint8_t Gscale = GFS_250DPS; // GFS_250DPS, GFS_500DPS, GFS_1000DPS, GFS_2000DPS
+        //uint8_t Mscale = MFS_16BITS; // MFS_14BITS or MFS_16BITS, 14-bit or 16-bit magnetometer resolution
+        //uint8_t Mmode = 0x06;        // Either 8 Hz 0x02) or 100 Hz (0x06) magnetometer data ODR
+
+        // Initialize MPU9250 device
+        // wake up device
+        writeReg(PWR_MGMT_1, 0x00); // Clear sleep mode bit (6), enable all sensors
+        delay_ms(100); // Delay 100 ms for PLL to get established on x-axis gyro; should check for PLL ready interrupt
+
+        // get stable time source
+        writeReg(PWR_MGMT_1, 0x01);  // Set clock source to be PLL with x-axis gyroscope reference, bits 2:0 = 001
+
+        // Configure Gyro and Accelerometer
+        // Disable FSYNC and set accelerometer and gyro bandwidth to 44 and 42 Hz, respectively;
+        // DLPF_CFG = bits 2:0 = 010; this sets the sample rate at 1 kHz for both
+        // Maximum delay is 4.9 ms which is just over a 200 Hz maximum rate
+        writeReg(CONFIG, 0x03);
+
+        //TODO:VISHNU: DO YOU GUYS Understand anyone below register config ?????
+
+        // Set sample rate = gyroscope output rate/(1 + SMPLRT_DIV)
+        writeReg(SMPLRT_DIV, 0x04);  // Use a 200 Hz rate; the same rate set in CONFIG above
+
+        // Set gyroscope full scale range
+        // Range selects FS_SEL and AFS_SEL are 0 - 3, so 2-bit values are left-shifted into positions 4:3
+        uint8_t c = readReg(GYRO_CONFIG); // get current GYRO_CONFIG register value
+        // c = c & ~0xE0; // Clear self-test bits [7:5]
+        c = c & ~0x02; // Clear Fchoice bits [1:0]
+        c = c & ~0x18; // Clear AFS bits [4:3]
+        c = c | AFS_2G << 3; // Set full scale range for the gyro
+        // c =| 0x00; // Set Fchoice for the gyro to 11 by writing its inverse to bits 1:0 of GYRO_CONFIG
+        writeReg(GYRO_CONFIG, c ); // Write new GYRO_CONFIG value to register
+
+        // Set accelerometer full-scale range configuration
+        c = readReg(ACCEL_CONFIG); // get current ACCEL_CONFIG register value
+        // c = c & ~0xE0; // Clear self-test bits [7:5]
+        c = c & ~0x18;  // Clear AFS bits [4:3]
+        c = c | AFS_2G << 3; // Set full scale range for the accelerometer
+        writeReg(ACCEL_CONFIG, c); // Write new ACCEL_CONFIG register value
+
+        // Set accelerometer sample rate configuration
+        // It is possible to get a 4 kHz sample rate from the accelerometer by choosing 1 for
+        // accel_fchoice_b bit [3]; in this case the bandwidth is 1.13 kHz
+        c = readReg(ACCEL_CONFIG2); // get current ACCEL_CONFIG2 register value
+        c = c & ~0x0F; // Clear accel_fchoice_b (bit 3) and A_DLPFG (bits [2:0])
+        c = c | 0x03;  // Set accelerometer rate to 1 kHz and bandwidth to 41 Hz
+        writeReg(ACCEL_CONFIG2, c); // Write new ACCEL_CONFIG2 register value
+
+        // The accelerometer, gyro, and thermometer are set to 1 kHz sample rates,
+        // but all these rates are further reduced by a factor of 5 to 200 Hz because of the SMPLRT_DIV setting
+
+        // Configure Interrupts and Bypass Enable
+        // Set interrupt pin active high, push-pull, and clear on read of INT_STATUS, enable I2C_BYPASS_EN so additional chips
+        // can join the I2C bus and all can be controlled by the Arduino as master
+
+        //writeReg(INT_PIN_CFG, 0x22);
+        //writeReg(INT_ENABLE, 0x01);  // Enable data ready (bit 0) interrupt
+        return true;
+    }
+
+    return false;
+ }
 
 int8_t MPU_9255::validate()
 {
@@ -218,12 +293,12 @@ void MPU_9255::calibrate_9255(float *dest1, float *dest2)
     data[5] = (-gyro_bias[2] / 4) & 0xFF;
 
     /// Push gyro biases to hardware registers
-    /*  writeByte(MPU9250_ADDRESS, XG_OFFSET_H, data[0]);
-     writeByte(MPU9250_ADDRESS, XG_OFFSET_L, data[1]);
-     writeByte(MPU9250_ADDRESS, YG_OFFSET_H, data[2]);
-     writeByte(MPU9250_ADDRESS, YG_OFFSET_L, data[3]);
-     writeByte(MPU9250_ADDRESS, ZG_OFFSET_H, data[4]);
-     writeByte(MPU9250_ADDRESS, ZG_OFFSET_L, data[5]);
+    /*  writeReg(XG_OFFSET_H, data[0]);
+     writeReg(XG_OFFSET_L, data[1]);
+     writeReg(YG_OFFSET_H, data[2]);
+     writeReg(YG_OFFSET_L, data[3]);
+     writeReg(ZG_OFFSET_H, data[4]);
+     writeReg(ZG_OFFSET_L, data[5]);
      */
     dest1[0] = (float) gyro_bias[0] / (float) gyrosensitivity; // construct gyro bias in deg/s for later manual subtraction
     dest1[1] = (float) gyro_bias[1] / (float) gyrosensitivity;
@@ -272,12 +347,12 @@ void MPU_9255::calibrate_9255(float *dest1, float *dest2)
     // Apparently this is not working for the acceleration biases in the MPU-9250
     // Are we handling the temperature correction bit properly?
     // Push accelerometer biases to hardware registers
-    /*  writeByte(MPU9250_ADDRESS, XA_OFFSET_H, data[0]);
-     writeByte(MPU9250_ADDRESS, XA_OFFSET_L, data[1]);
-     writeByte(MPU9250_ADDRESS, YA_OFFSET_H, data[2]);
-     writeByte(MPU9250_ADDRESS, YA_OFFSET_L, data[3]);
-     writeByte(MPU9250_ADDRESS, ZA_OFFSET_H, data[4]);
-     writeByte(MPU9250_ADDRESS, ZA_OFFSET_L, data[5]);
+    /*  writeReg(XA_OFFSET_H, data[0]);
+     writeReg(XA_OFFSET_L, data[1]);
+     writeReg(YA_OFFSET_H, data[2]);
+     writeReg(YA_OFFSET_L, data[3]);
+     writeReg(ZA_OFFSET_H, data[4]);
+     writeReg(ZA_OFFSET_L, data[5]);
      */
     // Output scaled accelerometer biases for manual subtraction in the main program
     dest2[0] = (float) accel_bias[0] / (float) accelsensitivity;
