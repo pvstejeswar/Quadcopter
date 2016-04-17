@@ -17,61 +17,62 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     avg = 7;
     min = 7;
     max = 7;
+    prevtimer = sys_get_uptime_ms();
+    currtimer = sys_get_uptime_ms();
     acc_x = acc_y = acc_z = 0;
     gyr_x = gyr_y = gyr_z = 0;
+    gyr_x1 = gyr_x2 = gyr_x3 = 0;
+    gyr_y1 = gyr_y2 = gyr_y3 = 0;
+    roll = pitch = yaw = 0;
+
 }
 
 bool GyroTask::run(void*p )
 {
-    /*int z = IMU.GS_getY();
-    static int prev_z = 0;*/
-
     /* Convert raw values to meter per second2 */
     acc_x = IMU.AS_getX() / ACC_CONST;
     acc_y = IMU.AS_getY() / ACC_CONST;
     acc_z = IMU.AS_getZ() / ACC_CONST;
 
-    /*Convert raw value to degree per second*/
-    gyr_x = IMU.GS_getX() / GYRO_CONST;
-    gyr_y = IMU.GS_getY() / GYRO_CONST;
-    gyr_z = IMU.GS_getZ() / GYRO_CONST;
-
-
-    /* TODO: Magnetometer value calculations....*/
-
-
-
-    /*Calculate angle here...   X axis --> Roll, Y axis --> pitch, Z axis -->yaw */
-
-    //double roll_acc  = atan2(acc_y, acc_z) * 180/M_PI;
-    //double pitch_acc = atan2(-acc_x, sqrt(acc_y * acc_y + acc_z * acc_z)) * 180/M_PI;
-
-    /* Y axis --> Roll, X axis --> pitch, ??? axis -->yaw */
     double roll_acc  = atan2(-acc_x, acc_z) * 180/M_PI;
     double pitch_acc = atan2(-acc_y, sqrt(acc_x * acc_x + acc_z * acc_z)) * 180/M_PI;
 
-    double roll_gyr  = gyr_x * 0.01;
-    double pitch_gyr = gyr_y * 0.01;
+    currtimer = sys_get_uptime_ms();
+    float diff = currtimer - prevtimer;
+    /*Convert raw value to degree per second*/
+    gyr_x = IMU.GS_getX()/ GYRO_CONST;
+    gyr_y = IMU.GS_getY()/ GYRO_CONST;
+    gyr_z = IMU.GS_getZ()/ GYRO_CONST;
+    prevtimer = currtimer;
+
+    gyr_x = gyr_x * diff/1000;
+    gyr_y = gyr_y * diff/1000;
+
+    double roll_gyr = roll  +  (gyr_x1 + 1/6* (gyr_x3 + 2*gyr_x2 + 2*gyr_x1 + gyr_x));
+    double pitch_gyr= pitch + (gyr_y1 + 1/6* (gyr_y3 + 2*gyr_y2 + 2*gyr_y1 + gyr_y));
+
+    gyr_x3 = gyr_x2;
+    gyr_x2 = gyr_x1;
+    gyr_x1 = gyr_x;
+
+    gyr_y3 = gyr_y2;
+    gyr_y2 = gyr_y1;
+    gyr_y1 = gyr_y;
+
+    roll  = GAINFACTOR * roll_gyr + (1- GAINFACTOR)* roll_acc;
+    pitch = GAINFACTOR * pitch_gyr + (1- GAINFACTOR)* pitch_acc;
 
 
-    printf("\n\nx %lf y %lf z %lf", acc_x, acc_y, acc_z);
-    printf("\nx %lf y %lf z %lf", gyr_x, gyr_y, gyr_z);
+    printf("\n-----------------------------------------------------------\n");
 
-    printf("\n\nACCE --- Roll %lf Pitch %lf", roll_acc, pitch_acc);
-    printf("\nGYRO --- Roll %lf Pitch %lf", roll_gyr, pitch_gyr);
-    printf("\nValidate Who am i %d", IMU.validate());
+    printf("Acc Raw Values are\nx %lf y %lf z %lf\n", acc_x, acc_y, acc_z);
+    printf("Gyr Raw Values are\nx %lf y %lf z %lf\n", gyr_x, gyr_y, gyr_z);
 
-    /*if (min > z)
-            min = z;
-    if (max < z)
-            max = z;
-    avg = (avg + z)/2;
+    printf("ACC ---> Roll %lf Pitch %lf\n", roll_acc, pitch_acc);
+    printf("GYRO ---> Roll %lf Pitch %lf\n", roll_gyr, pitch_gyr);
+    printf("Total Angle is ---> Roll %lf Pitch %lf\n", roll, pitch);
 
-    printf("\nY %d min %d max %d avg %d diff_avg %d diff %d\n", z, min, max, avg, z - avg, z - prev_z);
-    printf("\nX - %d\n", IMU.GS_getX());
-    printf("Y - %d\n", IMU.GS_getY());
-    printf("Z - %d\n", IMU.GS_getZ());
-    prev_z = z;*/
-    //delay_ms(1000);
+    printf("\n----------------------------------------------------------\n");
+
     return true;
 }
