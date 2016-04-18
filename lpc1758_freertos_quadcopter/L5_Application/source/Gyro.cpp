@@ -14,9 +14,6 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     qh = xQueueCreate(1, 20);
     addSharedObject(gyroData,qh);
     setRunDuration(taskRateHz);
-    avg = 7;
-    min = 7;
-    max = 7;
     prevtimer = sys_get_uptime_ms();
     currtimer = sys_get_uptime_ms();
     acc_x = acc_y = acc_z = 0;

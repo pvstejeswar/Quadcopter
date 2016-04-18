@@ -43,6 +43,8 @@ class GyroTask:public scheduler_task
         double  mag_x, mag_y, mag_z;
         double roll_gyr, pitch_gyr;
         double roll, pitch, yaw;
+        double gyr_x1, gyr_x2, gyr_x3;
+        double gyr_y1 , gyr_y2, gyr_y3 ;
 
     public:
         GyroTask(unsigned long rateHz, uint8_t priority);
