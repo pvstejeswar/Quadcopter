@@ -20,7 +20,6 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     gyr_x = gyr_y = gyr_z = 0;
     gyr_x1 = gyr_x2 = gyr_x3 = 0;
     gyr_y1 = gyr_y2 = gyr_y3 = 0;
-    roll_gyr = pitch_gyr = 0;
     roll = pitch = yaw = 0;
     mag_x = mag_y = mag_z = 0;
 }

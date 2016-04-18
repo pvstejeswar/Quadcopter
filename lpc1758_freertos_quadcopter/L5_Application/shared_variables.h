@@ -41,7 +41,6 @@ class GyroTask:public scheduler_task
         double  acc_x, acc_y, acc_z;  //TODO: Need to change location of variables ????
         double  gyr_x, gyr_y, gyr_z;
         double  mag_x, mag_y, mag_z;
-        double roll_gyr, pitch_gyr;
         double roll, pitch, yaw;
         double gyr_x1, gyr_x2, gyr_x3;
         double gyr_y1 , gyr_y2, gyr_y3 ;
