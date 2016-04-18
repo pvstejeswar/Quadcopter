@@ -13,9 +13,6 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
 {
     qh = xQueueCreate(1, 20);
     addSharedObject(gyroData,qh);
-<<<<<<< HEAD
-    //setRunDuration(taskRateHz);
-=======
     setRunDuration(taskRateHz);
     avg = 7;
     min = 7;
@@ -27,27 +24,10 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     gyr_x1 = gyr_x2 = gyr_x3 = 0;
     gyr_y1 = gyr_y2 = gyr_y3 = 0;
     roll = pitch = yaw = 0;
-
->>>>>>> vishnu
 }
 
 bool GyroTask::run(void*p )
 {
-<<<<<<< HEAD
-    printf("AS_X----------: %d\n", IMU.AS_getX());
-    printf("AS_Y----------: %d\n", IMU.AS_getY());
-    printf("AS_Z----------: %d\n", IMU.AS_getZ());
-
-    printf("GS_X----------: %d\n", IMU.GS_getX());
-    printf("GS_Y----------: %d\n", IMU.GS_getY());
-    printf("GS_Z----------: %d\n", IMU.GS_getZ());
-
-    delay_ms(3000);
-
-    printf("\n\n\n");
-    return true;
-}
-=======
     /* Convert raw values to meter per second2 */
     acc_x = IMU.AS_getX() / ACC_CONST;
     acc_y = IMU.AS_getY() / ACC_CONST;
@@ -73,7 +53,6 @@ bool GyroTask::run(void*p )
     gyr_x3 = gyr_x2;
     gyr_x2 = gyr_x1;
     gyr_x1 = gyr_x;
->>>>>>> vishnu
 
     gyr_y3 = gyr_y2;
     gyr_y2 = gyr_y1;

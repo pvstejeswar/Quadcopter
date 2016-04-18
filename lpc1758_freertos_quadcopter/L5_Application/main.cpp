@@ -8,11 +8,7 @@ int main(void)
 {
     //scheduler_add_task(new PWMTask(100,PRIORITY_HIGH));
     //scheduler_add_task(new BluetoothTask(100,PRIORITY_HIGH));
-<<<<<<< HEAD
-    scheduler_add_task(new GyroTask(1,PRIORITY_HIGH));
-=======
     scheduler_add_task(new GyroTask(100,PRIORITY_HIGH));
->>>>>>> vishnu
     scheduler_start(); ///< This shouldn't return
     return -1;
 }

@@ -1,3 +1,6 @@
 lpc1758_freertos_quadcopter/_build/*
 lpc1758_freertos_quadcopter/_build/lpc1758_freertos.bin
- lpc1758_freertos_quadcopter/_build/lpc1758_freertos.map
+lpc1758_freertos_quadcopter/_build/lpc1758_freertos.map
+*.mk
+*.bin
+*.map
