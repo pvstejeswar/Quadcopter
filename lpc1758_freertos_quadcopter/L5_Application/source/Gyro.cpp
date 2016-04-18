@@ -23,8 +23,7 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
 
 bool GyroTask::run(void*p )
 {
-    /*int z = IMU.GS_getY();
-    static int prev_z = 0;*/
+
 
     /* Convert raw values to meter per second2 */
     acc_x = IMU.AS_getX() / ACC_CONST;
@@ -38,6 +37,9 @@ bool GyroTask::run(void*p )
 
 
     /* TODO: Magnetometer value calculations....*/
+    mag_x = IMU.M_getX() / GYRO_CONST;
+    mag_y = IMU.M_getY() / GYRO_CONST;
+    mag_z = IMU.M_getZ() / GYRO_CONST;
 
 
 
