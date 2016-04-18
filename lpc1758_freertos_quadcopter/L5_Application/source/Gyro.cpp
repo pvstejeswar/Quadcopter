@@ -14,11 +14,11 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     qh = xQueueCreate(1, 20);
     addSharedObject(gyroData,qh);
     setRunDuration(taskRateHz);
-    avg = 7;
-    min = 7;
-    max = 7;
+
     acc_x = acc_y = acc_z = 0;
     gyr_x = gyr_y = gyr_z = 0;
+    roll_gyr = pitch_gyr = 0;
+    roll = yaw = pitch = 0;
 }
 
 bool GyroTask::run(void*p )
@@ -50,28 +50,20 @@ bool GyroTask::run(void*p )
     double roll_acc  = atan2(-acc_x, acc_z) * 180/M_PI;
     double pitch_acc = atan2(-acc_y, sqrt(acc_x * acc_x + acc_z * acc_z)) * 180/M_PI;
 
-    double roll_gyr  = gyr_x * 0.01;
-    double pitch_gyr = gyr_y * 0.01;
+    roll_gyr  = roll + gyr_x * 0.01;
+    pitch_gyr = pitch + gyr_y * 0.01;
 
+    roll = (roll_gyr * GAIN) + (roll_acc * (1 - GAIN));
+    pitch = (pitch_gyr * GAIN) + (pitch_acc * (1 - GAIN));
 
-    printf("\n\nx %lf y %lf z %lf", acc_x, acc_y, acc_z);
-    printf("\nx %lf y %lf z %lf", gyr_x, gyr_y, gyr_z);
+    printf("\n---------------------------------------------------");
+    printf("\nACC --> x %lf y %lf z %lf", acc_x, acc_y, acc_z);
+    printf("\nGYRO -->  x %lf y %lf z %lf", gyr_x, gyr_y, gyr_z);
 
-    printf("\n\nACCE --- Roll %lf Pitch %lf", roll_acc, pitch_acc);
-    printf("\nGYRO --- Roll %lf Pitch %lf", roll_gyr, pitch_gyr);
-    printf("\nValidate Who am i %d", IMU.validate());
+    printf("\n\nACCE ---> Roll %lf Pitch %lf", roll_acc, pitch_acc);
+    printf("\nGYRO ---> Roll %lf Pitch %lf", roll_gyr, pitch_gyr);
+    printf("\nTotal ---> Roll %lf Pitch %lf", roll, pitch);
+    printf("\n---------------------------------------------------\n");
 
-    /*if (min > z)
-            min = z;
-    if (max < z)
-            max = z;
-    avg = (avg + z)/2;
-
-    printf("\nY %d min %d max %d avg %d diff_avg %d diff %d\n", z, min, max, avg, z - avg, z - prev_z);
-    printf("\nX - %d\n", IMU.GS_getX());
-    printf("Y - %d\n", IMU.GS_getY());
-    printf("Z - %d\n", IMU.GS_getZ());
-    prev_z = z;*/
-    //delay_ms(1000);
     return true;
 }

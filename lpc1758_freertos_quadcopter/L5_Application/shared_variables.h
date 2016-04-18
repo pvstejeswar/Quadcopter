@@ -17,8 +17,11 @@
 #include "lpc_pwm.hpp"
 
 
-#define GYRO_CONST 131.0
-#define ACC_CONST 16384.0   /*Don't remove .0*/
+#define GYRO_CONST 131.0f
+#define ACC_CONST 16384.0f
+#define DPS 250.0f
+#define GAIN 0.8f
+
 
 class BluetoothTask:public scheduler_task
 {
@@ -37,9 +40,11 @@ class GyroTask:public scheduler_task
 {
         unsigned long taskRateHz;
         QueueHandle_t qh;
-        int min, max, avg;
         double  acc_x, acc_y, acc_z;  //TODO: Need to change location of variables ????
         double  gyr_x, gyr_y, gyr_z;
+        double  mag_x, mag_y, mag_z;
+        double roll_gyr, pitch_gyr;
+        double roll, pitch, yaw;
 
     public:
         GyroTask(unsigned long rateHz, uint8_t priority);
