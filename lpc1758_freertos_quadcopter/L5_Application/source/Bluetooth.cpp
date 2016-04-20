@@ -12,8 +12,7 @@
 BluetoothTask::BluetoothTask(unsigned long rateHz, uint8_t priority):
 scheduler_task("Bluetooth", 3 * 512, priority),taskRateHz(rateHz),U3(Uart3::getInstance())
 {
-    qh = xQueueCreate(1, 20);
-    addSharedObject(bluetoothCommand,qh);
+    qh = NULL;
     setRunDuration(taskRateHz);
 }
 
@@ -35,12 +34,13 @@ bool BluetoothTask::init(void)
 
 bool BluetoothTask::run(void* p)
 {
+    qh = getSharedObject(bluetoothCommand);
     char command[20]= {0};
     U3.gets(command,20,1000);
     if(strlen(command) > 0)
     {
         printf("Command is :-- %s\n",command);
-        if(!xQueueSend(qh, command, 1000)) {
+        if(!xQueueSend(qh, command, portMAX_DELAY)) {
             printf("Failed Sending Bluetooth Command in 20ms");
         }
     }

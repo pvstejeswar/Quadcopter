@@ -14,35 +14,45 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
         PWM::pwm1, 50), pwm2(PWM::pwm2, 50), pwm3(PWM::pwm3, 50), pwm4(
                 PWM::pwm4, 50)
 {
-    pwm_throttle = 6;
+    pwm_throttle = 7;
     pid_i_mem_roll = 0;
     pid_last_roll_d_error = 0;
     pid_i_mem_pitch = 0;
     pid_last_pitch_d_error = 0;
     pid_i_mem_yaw = 0;
     pid_last_yaw_d_error = 0;
+    pid_error_temp = 0;
+
+    pid_output_pitch = pid_output_roll = pid_output_yaw = 0;
+    gyro_pitch_input = gyro_roll_input = gyro_yaw_input = 0;
+
     pid_pitch_setpoint = 0;
     pid_yaw_setpoint = 0;
     pid_roll_setpoint = 0;
+
     esc_1 = esc_2 = esc_3 = esc_4 = 0;
 
-    pid_p_gain_roll = pid_p_gain_pitch = 1.4;
-    pid_i_gain_roll = pid_i_gain_pitch = 0.05;
-    pid_d_gain_roll = pid_d_gain_pitch =15;
+    pid_p_gain_roll = pid_p_gain_pitch = 0.09;
+    pid_i_gain_roll = pid_i_gain_pitch = 0.0002;
+    pid_d_gain_roll = pid_d_gain_pitch = 0.0001;
 
     pid_p_gain_yaw = 4.0;
     pid_i_gain_yaw = 0.02;
     pid_d_gain_yaw = 0.0;
 
-
+    gyro = xQueueCreate(1, sizeof(Orientation));
+    blth = xQueueCreate(1, 20);
+    addSharedObject(IMUData,gyro);
+    addSharedObject(bluetoothCommand,blth);
+    setRunDuration(taskRateHz);
 }
 
 bool PWMTask::run(void *p)
 {
-    char command[20] = { 0 };
-    blth = getSharedObject(bluetoothCommand);
 
-    if (!xQueueReceive(blth, command, portMAX_DELAY))
+#if 0
+    char command[20] = { 0 };
+    if (!xQueueReceive(blth, command, 10))
     {
         puts("Failed to receive bluetooth command in 20 ms");
     }
@@ -60,15 +70,35 @@ bool PWMTask::run(void *p)
         else if (strcmp("stop", command) == 0)
             motorcmd(motorstop);
     }
-
-    /*TODO : Receive GYRO Data */
+#endif
+    Orientation ori;
+    if (!xQueueReceive(gyro, &ori, 10))
+    {
+            puts("Failed to receive Gyro Data");
+    }
+    else
+    {
+        gyro_roll_input  = ori.roll;
+        gyro_pitch_input = ori.pitch;
+        gyro_yaw_input   = ori.yaw;
+    }
 
     calculate_pid();
 
-    esc_1 = pwm_throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;
-    esc_2 = pwm_throttle + pid_output_pitch + pid_output_roll + pid_output_yaw;
-    esc_3 = pwm_throttle + pid_output_pitch - pid_output_roll - pid_output_yaw;
-    esc_4 = pwm_throttle - pid_output_pitch - pid_output_roll + pid_output_yaw;
+    esc_1 = pwm_throttle + pid_output_pitch - pid_output_roll - pid_output_yaw;
+    esc_2 = pwm_throttle - pid_output_pitch - pid_output_roll + pid_output_yaw;
+    esc_3 = pwm_throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;
+    esc_4 = pwm_throttle + pid_output_pitch + pid_output_roll + pid_output_yaw;
+
+    esc_1 = (esc_1 < 7)?7:(esc_1>11)?11:esc_1;
+    esc_2 = (esc_2 < 7)?7:(esc_2>11)?11:esc_2;
+    esc_3 = (esc_3 < 7)?7:(esc_3>11)?11:esc_3;
+    esc_4 = (esc_4 < 7)?7:(esc_4>11)?11:esc_4;
+
+
+    printf("\n------- ESC Values -------\nESC1: %f\nESC2: %f\nESC3: %f\nESC4: %f\n",
+            esc_1,esc_2,esc_3,esc_4);
+
 
     pwm1.set(esc_1);
     pwm2.set(esc_2);
@@ -80,22 +110,26 @@ bool PWMTask::run(void *p)
 
 void PWMTask::calculate_pid(){
     //Roll calculations
-    pid_error_temp = gyro_roll_input - pid_roll_setpoint;
+    pid_error_temp = (gyro_roll_input - pid_roll_setpoint)/5;
     pid_i_mem_roll += pid_i_gain_roll * pid_error_temp;
     pid_output_roll = pid_p_gain_roll * pid_error_temp + pid_i_mem_roll + pid_d_gain_roll * (pid_error_temp - pid_last_roll_d_error);
     pid_last_roll_d_error = pid_error_temp;
 
     //Pitch calculations
-    pid_error_temp = gyro_pitch_input - pid_pitch_setpoint;
+    pid_error_temp = (gyro_pitch_input - pid_pitch_setpoint)/5;
     pid_i_mem_pitch += pid_i_gain_pitch * pid_error_temp;
     pid_output_pitch = pid_p_gain_pitch * pid_error_temp + pid_i_mem_pitch + pid_d_gain_pitch * (pid_error_temp - pid_last_pitch_d_error);
     pid_last_pitch_d_error = pid_error_temp;
 
     //Yaw calculations
-    pid_error_temp = gyro_yaw_input - pid_yaw_setpoint;
+    pid_error_temp = (gyro_yaw_input - pid_yaw_setpoint);
     pid_i_mem_yaw += pid_i_gain_yaw * pid_error_temp;
     pid_output_yaw = pid_p_gain_yaw * pid_error_temp + pid_i_mem_yaw + pid_d_gain_yaw * (pid_error_temp - pid_last_yaw_d_error);
     pid_last_yaw_d_error = pid_error_temp;
+
+    printf("\n\nGyro Angles ---> Roll %lf Pitch %lf\n", gyro_roll_input, gyro_pitch_input);
+    printf("Pid Output roll %lf pitch %lf\n",pid_output_roll,pid_output_pitch);
+
 }
 
 
