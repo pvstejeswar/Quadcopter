@@ -8,6 +8,8 @@
 #include "shared_variables.h"
 #include "string.h"
 #include "io.hpp"
+#include "time.h"
+
 
 PWMTask::PWMTask(unsigned long rateHz, uint8_t priority) :
 scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
@@ -22,6 +24,7 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
     pid_i_mem_yaw = 0;
     pid_last_yaw_d_error = 0;
     pid_error_temp = 0;
+    armed = false;
 
     pid_output_pitch = pid_output_roll = pid_output_yaw = 0;
     gyro_pitch_input = gyro_roll_input = gyro_yaw_input = 0;
@@ -33,8 +36,8 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
     esc_1 = esc_2 = esc_3 = esc_4 = 0;
 
     pid_p_gain_roll = pid_p_gain_pitch = 0.09;
-    pid_i_gain_roll = pid_i_gain_pitch = 0.0002;
-    pid_d_gain_roll = pid_d_gain_pitch = 0.0001;
+    pid_i_gain_roll = pid_i_gain_pitch = 0.0001;
+    pid_d_gain_roll = pid_d_gain_pitch = 0.0002;
 
     pid_p_gain_yaw = 4.0;
     pid_i_gain_yaw = 0.02;
@@ -50,7 +53,6 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
 bool PWMTask::run(void *p)
 {
 
-#if 0
     char command[20] = { 0 };
     if (!xQueueReceive(blth, command, 10))
     {
@@ -60,21 +62,26 @@ bool PWMTask::run(void *p)
     {
         printf("Received: %s\n", command);
         if (strcmp("init", command) == 0)
-            motorcmd(motorinit);
-        else if (strcmp("up", command) == 0)
-            motorcmd(motorup);
-        else if (strcmp("down", command) == 0)
-            motorcmd(motordown);
-        else if (strcmp("hover", command) == 0)
-            motorcmd(motorhover);
+         motorcmd(motorinit);
+        else if (strcmp("start", command) == 0)
+            armed = true;
+            //  motorcmd(motorup);
+        //else if (strcmp("down", command) == 0)
+        //  motorcmd(motordown);
+        //else if (strcmp("hover", command) == 0)
+        //  motorcmd(motorhover);
         else if (strcmp("stop", command) == 0)
+        {
+            armed = false;
             motorcmd(motorstop);
+        }
+
     }
-#endif
+
     Orientation ori;
     if (!xQueueReceive(gyro, &ori, 10))
     {
-            puts("Failed to receive Gyro Data");
+        puts("Failed to receive Gyro Data");
     }
     else
     {
@@ -83,28 +90,31 @@ bool PWMTask::run(void *p)
         gyro_yaw_input   = ori.yaw;
     }
 
-    calculate_pid();
+    if(armed == true)
+    {
+        calculate_pid();
 
-    esc_1 = pwm_throttle + pid_output_pitch - pid_output_roll - pid_output_yaw;
-    esc_2 = pwm_throttle - pid_output_pitch - pid_output_roll + pid_output_yaw;
-    esc_3 = pwm_throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;
-    esc_4 = pwm_throttle + pid_output_pitch + pid_output_roll + pid_output_yaw;
+        esc_1 = pwm_throttle + pid_output_pitch - pid_output_roll - pid_output_yaw;
+        esc_2 = pwm_throttle - pid_output_pitch - pid_output_roll + pid_output_yaw;
+        esc_3 = pwm_throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;
+        esc_4 = pwm_throttle + pid_output_pitch + pid_output_roll + pid_output_yaw;
 
-    esc_1 = (esc_1 < 7)?7:(esc_1>11)?11:esc_1;
-    esc_2 = (esc_2 < 7)?7:(esc_2>11)?11:esc_2;
-    esc_3 = (esc_3 < 7)?7:(esc_3>11)?11:esc_3;
-    esc_4 = (esc_4 < 7)?7:(esc_4>11)?11:esc_4;
+        esc_1 = (esc_1 < 7)?7:(esc_1>9)?9:esc_1;
+        esc_2 = (esc_2 < 7)?7:(esc_2>9)?9:esc_2;
+        esc_3 = (esc_3 < 7)?7:(esc_3>9)?9:esc_3;
+        esc_4 = (esc_4 < 7)?7:(esc_4>9)?9:esc_4;
+
+        printf("TIME IS %lu",time(NULL));
+
+        printf("\n------- ESC Values -------\nESC1: %f\nESC2: %f\nESC3: %f\nESC4: %f\n",
+                esc_1,esc_2,esc_3,esc_4);
 
 
-    printf("\n------- ESC Values -------\nESC1: %f\nESC2: %f\nESC3: %f\nESC4: %f\n",
-            esc_1,esc_2,esc_3,esc_4);
-
-
-    pwm1.set(esc_1);
-    pwm2.set(esc_2);
-    pwm3.set(esc_3);
-    pwm4.set(esc_4);
-
+        pwm1.set(esc_1);
+        pwm2.set(esc_2);
+        pwm3.set(esc_3);
+        pwm4.set(esc_4);
+    }
     return true;
 }
 
@@ -137,15 +147,7 @@ void PWMTask::motorcmd(int cmd)
 {
     if (cmd == motorinit)
     {
-        pwm1.set(11);
-        pwm2.set(11);
-        pwm3.set(11);
-        pwm4.set(11);
-        delay_ms(1000);
-        pwm1.set(5);
-        pwm2.set(5);
-        pwm3.set(5);
-        pwm4.set(5);
+        esc_initialize();
         LE.setAll(0xF);
         return;
     }

@@ -28,6 +28,9 @@ typedef struct{
 }Orientation;
 
 
+void esc_initialize();
+
+
 
 class BluetoothTask:public scheduler_task
 {
@@ -39,7 +42,6 @@ class BluetoothTask:public scheduler_task
         BluetoothTask(unsigned long rateHz, uint8_t priority);
         bool run(void*p);
         bool init(void);
-
 };
 
 class GyroTask:public scheduler_task
@@ -63,6 +65,7 @@ class PWMTask:public scheduler_task
         unsigned long taskRateHz;
         QueueHandle_t blth,gyro;
         PWM pwm1, pwm2, pwm3, pwm4;
+        bool armed;
 
         float pid_p_gain_roll;
         float pid_i_gain_roll;

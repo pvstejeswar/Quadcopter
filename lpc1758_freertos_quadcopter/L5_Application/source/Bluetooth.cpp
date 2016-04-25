@@ -22,8 +22,8 @@ bool BluetoothTask::init(void)
     U3.init(38400,10,10);
     delay_ms(1000);
     U3.put("\r\n+STWMOD=0\r\n",portMAX_DELAY);
-    U3.put("\r\n+STNA=SJQUAD\r\n",portMAX_DELAY);
-    U3.put("\r\n+STAUTO=0\r\n",portMAX_DELAY);
+    U3.put("\r\n+STNA=SJ-QUAD\r\n",portMAX_DELAY);
+    U3.put("\r\n+STAUTO=0\r\n",portMAX_DELAY); // 1: auto connect to last connected device
     U3.put("\r\n+STOAUT=1\r\n",portMAX_DELAY);
     U3.put("\r\n +STPIN=0000\r\n",portMAX_DELAY);
     delay_ms(2000); // This delay is required.
