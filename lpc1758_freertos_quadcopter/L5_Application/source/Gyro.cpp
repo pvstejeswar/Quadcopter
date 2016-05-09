@@ -54,6 +54,12 @@ bool GyroTask::run(void*p )
     roll  = GAINFACTOR * roll_gyr + (1- GAINFACTOR)* roll_acc;
     pitch = GAINFACTOR * pitch_gyr + (1- GAINFACTOR)* pitch_acc;
 
+    roll = (roll > -90)?(roll <90?roll:90):(-90);
+    pitch = (pitch > -90)?(pitch <90?pitch:90):(-90);
+
+    if(pitch > 30)
+        roll=0;
+
     qh = getSharedObject(IMUData);
     Orientation ori;
     ori.pitch = pitch;

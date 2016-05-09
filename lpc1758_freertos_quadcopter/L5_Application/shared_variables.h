@@ -13,7 +13,7 @@
 #include <math.h>
 #include "scheduler_task.hpp"
 #include "utilities.h"
-#include "uart3.hpp"
+#include "uart2.hpp"
 #include "lpc_pwm.hpp"
 
 
@@ -36,7 +36,7 @@ class BluetoothTask:public scheduler_task
 {
         unsigned long taskRateHz;
         QueueHandle_t qh;
-        Uart3& U3;
+        Uart2& U2;
 
     public:
         BluetoothTask(unsigned long rateHz, uint8_t priority);
