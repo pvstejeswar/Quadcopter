@@ -1,6 +1,8 @@
 lpc1758_freertos_quadcopter/_build/*
 lpc1758_freertos_quadcopter/_build/lpc1758_freertos.bin
 lpc1758_freertos_quadcopter/_build/lpc1758_freertos.map
+QuadStreaming/node_programs/liveStreaming/node_modules/*
+QuadStreaming/node_programs/liveStreaming/logs/*
 *.mk
 *.bin
 *.map

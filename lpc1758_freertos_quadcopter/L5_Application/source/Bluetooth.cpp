@@ -8,6 +8,7 @@
 #include "shared_variables.h"
 #include "uart2.hpp"
 #include "string.h"
+#include "io.hpp"
 
 BluetoothTask::BluetoothTask(unsigned long rateHz, uint8_t priority):
 scheduler_task("Bluetooth", 3 * 512, priority),taskRateHz(rateHz),U2(Uart2::getInstance())
@@ -45,6 +46,26 @@ bool BluetoothTask::run(void* p)
         if(!xQueueSend(qh, command, portMAX_DELAY)) {
             //printf("Failed Sending Command in 20ms");
         }
+    }
+    else
+    {
+        if (SW.getSwitch(1))
+        {
+            xQueueSend(qh, "start", portMAX_DELAY);
+        }
+        else if (SW.getSwitch(2))
+        {
+            xQueueSend(qh, "stop", portMAX_DELAY);
+        }
+        else if (SW.getSwitch(3))
+        {
+            xQueueSend(qh, "up", portMAX_DELAY);
+        }
+        else if (SW.getSwitch(4))
+        {
+            xQueueSend(qh, "down", portMAX_DELAY);
+        }
+
     }
     return true;
 }

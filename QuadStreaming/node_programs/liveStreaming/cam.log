@@ -1,0 +1,296 @@
+[0x17a3b30] main libvlc debug: VLC media player - 2.0.3 Twoflower
+[0x17a3b30] main libvlc debug: Copyright © 1996-2012 VLC authors and VideoLAN
+[0x17a3b30] main libvlc debug: revision 2.0.2-93-g77aa89e
+[0x17a3b30] main libvlc debug: configured with ./configure  '--enable-static' '--build=arm-linux-gnueabihf' 'CFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' 'CPPFLAGS=-D_FORTIFY_SOURCE=2' 'CXXFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' 'LDFLAGS=-Wl,-z,relro' '--config-cache' '--disable-maintainer-mode' '--disable-silent-rules' '--disable-update-check' '--enable-fast-install' '--prefix=/usr' '--docdir=/usr/share/doc/vlc-nox' '--sysconfdir=/etc' '--with-binary-version=5+deb7u2' '--enable-a52' '--enable-aa' '--enable-bluray' '--enable-bonjour' '--enable-caca' '--enable-dbus' '--enable-dca' '--enable-dirac' '--enable-directfb' '--enable-dvbpsi' '--enable-dvdnav' '--enable-faad' '--enable-flac' '--enable-fluidsynth' '--enable-freetype' '--enable-fribidi' '--enable-gnutls' '--enable-jack' '--enable-kate' '--enable-libass' '--enable-libmpeg2' '--enable-libproxy' '--enable-libxml2' '--enable-lirc' '--enable-live555' '--enable-mad' '--enable-mkv' '--enable-mod' '--enable-mpc' '--enable-mtp' '--enable-mux_ogg' '--enable-ncurses' '--enable-notify' '--enable-ogg' '--enable-oss' '--enable-pulse' '--enable-qt4' '--enable-realrtsp' '--enable-samplerate' '--enable-schroedinger' '--enable-sdl' '--enable-shout' '--enable-skins2' '--enable-smb' '--enable-speex' '--enable-svg' '--enable-taglib' '--enable-theora' '--enable-twolame' '--enable-upnp' '--enable-vcd' '--enable-vcdx' '--enable-vorbis' '--enable-x264' '--enable-zvbi' '--with-kde-solid=/usr/share/kde4/apps/solid/actions/' '--disable-dxva2' '--disable-gnomevfs' '--disable-goom' '--disable-portaudio' '--disable-projectm' '--disable-sqlite' '--disable-telx' '--enable-alsa' '--enable-atmo' '--enable-dc1394' '--enable-dv' '--enable-fbosd' '--enable-libva' '--enable-linsys' '--enable-omxil' '--enable-pvr' '--enable-udev' '--enable-v4l2' '--disable-crystalhd' '--disable-mmx' '--disable-sse' '--disable-neon' '--disable-altivec' 'build_alias=arm-linux-gnueabihf'
+[0x17a3b30] main libvlc debug: searching plug-in modules
+[0x17a3b30] main libvlc debug: loading plugins cache file /usr/lib/vlc/plugins/plugins.dat
+[0x17a3b30] main libvlc debug: recursively browsing `/usr/lib/vlc/plugins'
+[0x17a3b30] main libvlc debug: saving plugins cache /usr/lib/vlc/plugins/plugins.dat
+[0x17a3b30] main libvlc debug: plug-ins loaded: 410 modules
+[0x17a3b30] main libvlc debug: opening config file (/home/pi/.config/vlc/vlcrc)
+[0x17a3b30] main libvlc debug: translation test: code is "en_GB"
+[0x17a3b30] main libvlc debug: CPU has capabilities FPU 
+[0x17a3b30] main libvlc debug: looking for memcpy module: 1 candidate
+[0x17a3b30] main libvlc debug: using memcpy module "memcpy"
+[0x1911a78] main input debug: Creating an input for 'Media Library'
+[0x1911a78] main input debug: Input is a meta file: disabling unneeded options
+[0x1911a78] main input debug: using timeshift granularity of 50 MiB, in path '/tmp'
+[0x1911a78] main input debug: `file/xspf-open:///home/pi/.local/share/vlc/ml.xspf' gives access `file' demux `xspf-open' path `/home/pi/.local/share/vlc/ml.xspf'
+[0x1911a78] main input debug: creating demux: access='file' demux='xspf-open' location='/home/pi/.local/share/vlc/ml.xspf' file='/home/pi/.local/share/vlc/ml.xspf'
+[0x17b6910] main demux debug: looking for access_demux module: 3 candidates
+[0x17b6910] main demux debug: no access_demux module matching "file" could be loaded
+[0x17b6910] main demux debug: TIMER module_need() : 6.687 ms - Total 6.687 ms / 1 intvls (Avg 6.687 ms)
+[0x1911a78] main input debug: creating access 'file' location='/home/pi/.local/share/vlc/ml.xspf', path='/home/pi/.local/share/vlc/ml.xspf'
+[0x17b7068] main access debug: looking for access module: 2 candidates
+[0x17b7068] filesystem access debug: opening file `/home/pi/.local/share/vlc/ml.xspf'
+[0x17b7068] main access debug: using access module "filesystem"
+[0x17b7068] main access debug: TIMER module_need() : 2.895 ms - Total 2.895 ms / 1 intvls (Avg 2.895 ms)
+[0x17b7768] main stream debug: Using stream method for AStream*
+[0x17b7768] main stream debug: starting pre-buffering
+[0x17b7768] main stream debug: received first data after 0 ms
+[0x17b7768] main stream debug: pre-buffering done 296 bytes in 0s - 1953 KiB/s
+[0x17b7928] main stream debug: looking for stream_filter module: 7 candidates
+[0x17b7928] main stream debug: no stream_filter module matching "any" could be loaded
+[0x17b7928] main stream debug: TIMER module_need() : 5.286 ms - Total 5.286 ms / 1 intvls (Avg 5.286 ms)
+[0x17b7928] main stream debug: looking for stream_filter module: 1 candidate
+[0x17b7928] main stream debug: using stream_filter module "stream_filter_record"
+[0x17b7928] main stream debug: TIMER module_need() : 1.299 ms - Total 1.299 ms / 1 intvls (Avg 1.299 ms)
+[0x1911a78] main input debug: creating demux: access='file' demux='xspf-open' location='/home/pi/.local/share/vlc/ml.xspf' file='/home/pi/.local/share/vlc/ml.xspf'
+[0x183d3d8] main demux debug: looking for demux module: 1 candidate
+[0x183d3d8] playlist demux debug: using XSPF playlist reader
+[0x183d3d8] main demux debug: using demux module "playlist"
+[0x183d3d8] main demux debug: TIMER module_need() : 1.871 ms - Total 1.871 ms / 1 intvls (Avg 1.871 ms)
+[0x1840148] main demux meta debug: looking for meta reader module: 2 candidates
+[0x1840148] lua demux meta debug: Trying Lua scripts in /home/pi/.local/share/vlc/lua/meta/reader
+[0x1840148] lua demux meta debug: Trying Lua scripts in /usr/lib/vlc/lua/meta/reader
+[0x1840148] lua demux meta debug: Trying Lua playlist script /usr/lib/vlc/lua/meta/reader/filename.luac
+[0x1840148] lua demux meta debug: Trying Lua scripts in /usr/share/vlc/lua/meta/reader
+[0x1840148] main demux meta debug: no meta reader module matching "any" could be loaded
+[0x1840148] main demux meta debug: TIMER module_need() : 21.483 ms - Total 21.483 ms / 1 intvls (Avg 21.483 ms)
+[0x1911a78] main input debug: `file/xspf-open:///home/pi/.local/share/vlc/ml.xspf' successfully opened
+[0x1831fe8] main xml reader debug: looking for xml reader module: 1 candidate
+[0x1831fe8] main xml reader debug: using xml reader module "xml"
+[0x1831fe8] main xml reader debug: TIMER module_need() : 5.672 ms - Total 5.672 ms / 1 intvls (Avg 5.672 ms)
+[0x183d3d8] playlist demux debug: parsed 0 tracks successfully
+[0x1911a78] main input debug: EOF reached
+[0x183d3d8] main demux debug: removing module "playlist"
+[0x17b7928] main stream debug: removing module "stream_filter_record"
+[0x17b7068] main access debug: removing module "filesystem"
+[0x1911a78] main input debug: TIMER input launching for 'Media Library' : 43.759 ms - Total 43.759 ms / 1 intvls (Avg 43.759 ms)
+[0x1831070] main interface debug: looking for interface module: 1 candidate
+[0x1831070] main interface debug: using interface module "hotkeys"
+[0x1831070] main interface debug: TIMER module_need() : 1.891 ms - Total 1.891 ms / 1 intvls (Avg 1.891 ms)
+[0x17b61b0] main interface debug: looking for interface module: 1 candidate
+[0x17b61b0] inhibit interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0x17b61b0] main interface debug: no interface module matching "inhibit,none" could be loaded
+[0x17b61b0] main interface debug: TIMER module_need() : 1.774 ms - Total 1.774 ms / 1 intvls (Avg 1.774 ms)
+[0x17b61b0] main interface error: no suitable interface module
+[0x17c4950] main playlist debug: playlist threads correctly activated
+[0x17c4950] main playlist debug: rebuilding array of current - root Playlist
+[0x17c4950] main playlist debug: rebuild done - 0 items, index -1
+[0x17c4950] main playlist debug: adding item `stdin' ( stream:///dev/stdin )
+[0x1911a78] main input debug: Creating an input for 'stdin'
+[0x17b7050] main interface debug: looking for interface module: 1 candidate
+[0x17c4950] main playlist debug: no fetch required for (null) (art currently (null))
+[0x17b7050] main interface debug: no interface module matching "globalhotkeys,none" could be loaded
+[0x17b7050] main interface debug: TIMER module_need() : 2.689 ms - Total 2.689 ms / 1 intvls (Avg 2.689 ms)
+[0x17b7050] main interface error: no suitable interface module
+[0x17a3b30] main libvlc error: interface "globalhotkeys,none" initialization failed
+[0x17b7050] main interface debug: looking for interface module: 1 candidate
+[0x17b7050] dummy interface: using the dummy interface module...
+[0x17b7050] main interface debug: using interface module "dummy"
+[0x17b7050] main interface debug: TIMER module_need() : 1.398 ms - Total 1.398 ms / 1 intvls (Avg 1.398 ms)
+[0x17c4950] main playlist debug: processing request item: null, node: Playlist, skip: 0
+[0x17c4950] main playlist debug: rebuilding array of current - root Playlist
+[0x17c4950] main playlist debug: rebuild done - 1 items, index -1
+[0x17c4950] main playlist debug: starting playback of the new playlist item
+[0x17c4950] main playlist debug: resyncing on stdin
+[0x17c4950] main playlist debug: stdin is at 0
+[0x17c4950] main playlist debug: creating new input thread
+[0x1912838] main input debug: Creating an input for 'stdin'
+[0x1831a90] main stream output debug: using sout chain=`rtp{sdp=rtsp://:8554/}'
+[0x1831a90] main stream output debug: stream=`rtp'
+[0x1831c60] main stream out debug: looking for sout stream module: 1 candidate
+[0x1831c60] main stream out debug: set config option: sout-rtp-sdp to rtsp://:8554/
+[0x1831c60] stream_out_rtp stream out debug: RTSP stream at /
+[0x1831c60] main stream out debug: net: listening to * port 8554
+[0x1831c60] main stream out debug: socket error: Address family not supported by protocol
+[0x1831c60] main stream out debug: using sout stream module "stream_out_rtp"
+[0x1831c60] main stream out debug: TIMER module_need() : 21.324 ms - Total 21.324 ms / 1 intvls (Avg 21.324 ms)
+[0x1912838] main input debug: using timeshift granularity of 50 MiB, in path '/tmp'
+[0x1912838] main input debug: `stream:///dev/stdin' gives access `stream' demux `' path `/dev/stdin'
+[0x1912838] main input debug: enforced demux ` h264'
+[0x1912838] main input debug: creating demux: access='stream' demux='h264' location='/dev/stdin' file='/dev/stdin'
+[0x18349a8] main demux debug: looking for access_demux module: 0 candidates
+[0x18349a8] main demux debug: no access_demux module matched "stream"
+[0x18349a8] main demux debug: TIMER module_need() : 0.706 ms - Total 0.706 ms / 1 intvls (Avg 0.706 ms)
+[0x1912838] main input debug: creating access 'stream' location='/dev/stdin', path='/dev/stdin'
+[0x18349a8] main access debug: looking for access module: 1 candidate
+[0x18349a8] filesystem access debug: opening file `/dev/stdin'
+[0x18349a8] main access debug: using access module "filesystem"
+[0x18349a8] main access debug: TIMER module_need() : 1.703 ms - Total 1.703 ms / 1 intvls (Avg 1.703 ms)
+[0x18323e8] main stream debug: Using stream method for AStream*
+[0x18323e8] main stream debug: starting pre-buffering
+[0x18323e8] main stream debug: received first data after 0 ms
+[0x18323e8] main stream debug: pre-buffering done 1024 bytes in 0s - 4694 KiB/s
+[0x18325b8] main stream debug: looking for stream_filter module: 7 candidates
+[0x18325b8] main stream debug: no stream_filter module matching "any" could be loaded
+[0x18325b8] main stream debug: TIMER module_need() : 0.627 ms - Total 0.627 ms / 1 intvls (Avg 0.627 ms)
+[0x18325b8] main stream debug: looking for stream_filter module: 1 candidate
+[0x18325b8] main stream debug: using stream_filter module "stream_filter_record"
+[0x18325b8] main stream debug: TIMER module_need() : 0.526 ms - Total 0.526 ms / 1 intvls (Avg 0.526 ms)
+[0x1912838] main input debug: creating demux: access='stream' demux='h264' location='/dev/stdin' file='/dev/stdin'
+[0x18326f0] main demux debug: looking for demux module: 1 candidate
+[0x18326f0] h264 demux debug: using 25.00 fps
+[0x1832a70] main demux packetizer debug: looking for packetizer module: 21 candidates
+[0x1832a70] main demux packetizer debug: using packetizer module "packetizer_h264"
+[0x1832a70] main demux packetizer debug: TIMER module_need() : 11.630 ms - Total 11.630 ms / 1 intvls (Avg 11.630 ms)
+[0x18326f0] main demux debug: using demux module "h264"
+[0x18326f0] main demux debug: TIMER module_need() : 13.867 ms - Total 13.867 ms / 1 intvls (Avg 13.867 ms)
+[0x1912838] main input debug: starting in async mode
+[0x1834cd0] main demux meta debug: looking for meta reader module: 2 candidates
+[0x1834cd0] lua demux meta debug: Trying Lua scripts in /home/pi/.local/share/vlc/lua/meta/reader
+[0x1834cd0] lua demux meta debug: Trying Lua scripts in /usr/lib/vlc/lua/meta/reader
+[0x1834cd0] lua demux meta debug: Trying Lua playlist script /usr/lib/vlc/lua/meta/reader/filename.luac
+[0x1834cd0] lua demux meta debug: Trying Lua scripts in /usr/share/vlc/lua/meta/reader
+[0x1834cd0] main demux meta debug: no meta reader module matching "any" could be loaded
+[0x1834cd0] main demux meta debug: TIMER module_need() : 3.720 ms - Total 3.720 ms / 1 intvls (Avg 3.720 ms)
+[0x1912838] main input debug: `stream:///dev/stdin' successfully opened
+[0x1832a70] packetizer_h264 demux packetizer debug: found NAL_SPS (sps_id=0)
+[0x1832a70] packetizer_h264 demux packetizer debug: found NAL_PPS (pps_id=0 sps_id=0)
+[0x1912838] main input debug: selecting program id=0
+[0x1834c78] main decoder debug: looking for packetizer module: 21 candidates
+[0x1834c78] main decoder debug: using packetizer module "packetizer_h264"
+[0x1834c78] main decoder debug: TIMER module_need() : 0.715 ms - Total 0.715 ms / 1 intvls (Avg 0.715 ms)
+[0x1912838] main input error: Invalid PCR value in ES_OUT_SET_(GROUP_)PCR !
+[0x1912838] main input debug: switching to sync mode
+[0x1834c78] packetizer_h264 decoder debug: found NAL_SPS (sps_id=0)
+[0x1834c78] packetizer_h264 decoder debug: found NAL_PPS (pps_id=0 sps_id=0)
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 13%
+[0x1831a90] main stream output debug: adding a new sout input (sout_input:0x18364a8)
+[0x1831c60] stream_out_rtp stream out debug: maximum RTP packet size: 1400 bytes
+[0x1831c60] stream_out_rtp stream out debug: RTSP: adding /trackID=0
+[0x1831c60] stream_out_rtp stream out debug: sdp=
+v=0
+o=- 15770793324917081335 15770793324917081335 IN IP4 raspberrypi
+s=Unnamed
+i=N/A
+c=IN IP4 0.0.0.0
+t=0 0
+a=tool:vlc 2.0.3
+a=recvonly
+a=type:broadcast
+a=charset:UTF-8
+m=video 0 RTP/AVP 96
+b=RR:0
+a=rtpmap:96 H264/90000
+a=fmtp:96 packetization-mode=1
+
+[0x1912838] main input debug: Buffering 26%
+[0x1912838] main input debug: Buffering 40%
+[0x1912838] main input debug: Buffering 53%
+[0x1912838] main input debug: Buffering 66%
+[0x1912838] main input debug: Buffering 80%
+[0x1912838] main input debug: Buffering 93%
+[0x1912838] main input debug: Stream buffering done (320 ms in 752 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 432 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 9%
+[0x1912838] main input debug: Buffering 18%
+[0x1912838] main input debug: Buffering 27%
+[0x1912838] main input debug: Buffering 36%
+[0x1912838] main input debug: Buffering 46%
+[0x1912838] main input debug: Buffering 55%
+[0x1912838] main input debug: Buffering 64%
+[0x1912838] main input debug: Buffering 73%
+[0x1912838] main input debug: Buffering 83%
+[0x1912838] main input debug: Buffering 92%
+[0x1912838] main input debug: Stream buffering done (440 ms in 999 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 559 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 7%
+[0x1912838] main input debug: Buffering 14%
+[0x1912838] main input debug: Buffering 21%
+[0x1912838] main input debug: Buffering 28%
+[0x1912838] main input debug: Buffering 35%
+[0x1912838] main input debug: Buffering 42%
+[0x1912838] main input debug: Buffering 50%
+[0x1912838] main input debug: Buffering 57%
+[0x1831c60] main stream out debug: net: connecting to [192.168.43.2]:58940
+[0x1831c60] main stream out debug: net: connecting to [192.168.43.2]:58941 from [192.168.43.231]:55394
+[0x1912838] main input debug: Buffering 64%
+[0x1912838] main input debug: Buffering 71%
+[0x1912838] main input debug: Buffering 78%
+[0x1912838] main input debug: Buffering 85%
+[0x1912838] main input debug: Buffering 92%
+[0x1912838] main input debug: Stream buffering done (560 ms in 1163 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 603 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 6%
+[0x1912838] main input debug: Buffering 13%
+[0x1912838] main input debug: Buffering 19%
+[0x1912838] main input debug: Buffering 26%
+[0x1912838] main input debug: Buffering 33%
+[0x1912838] main input debug: Buffering 39%
+[0x1912838] main input debug: Buffering 46%
+[0x1912838] main input debug: Buffering 52%
+[0x1912838] main input debug: Buffering 59%
+[0x1912838] main input debug: Buffering 66%
+[0x1912838] main input debug: Buffering 72%
+[0x1912838] main input debug: Buffering 79%
+[0x1912838] main input debug: Buffering 86%
+[0x1912838] main input debug: Buffering 92%
+[0x1912838] main input debug: Buffering 99%
+[0x1912838] main input debug: Stream buffering done (640 ms in 1249 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 610 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 6%
+[0x1912838] main input debug: Buffering 13%
+[0x1912838] main input debug: Buffering 19%
+[0x1912838] main input debug: Buffering 26%
+[0x1912838] main input debug: Buffering 32%
+[0x1912838] main input debug: Buffering 39%
+[0x1912838] main input debug: Buffering 45%
+[0x1912838] main input debug: Buffering 52%
+[0x1912838] main input debug: Buffering 58%
+[0x1912838] main input debug: Buffering 65%
+[0x1912838] main input debug: Buffering 72%
+[0x1912838] main input debug: Buffering 78%
+[0x1912838] main input debug: Buffering 85%
+[0x1912838] main input debug: Buffering 91%
+[0x1912838] main input debug: Buffering 98%
+[0x1912838] main input debug: Stream buffering done (640 ms in 1414 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 652 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 6%
+[0x1912838] main input debug: Buffering 12%
+[0x1912838] main input debug: Buffering 18%
+[0x1912838] main input debug: Buffering 24%
+[0x1912838] main input debug: Buffering 30%
+[0x1912838] main input debug: Buffering 36%
+[0x1912838] main input debug: Buffering 42%
+[0x1912838] main input debug: Buffering 49%
+[0x1912838] main input debug: Buffering 55%
+[0x1912838] main input debug: Buffering 61%
+[0x1912838] main input debug: Buffering 67%
+[0x1912838] main input debug: Buffering 73%
+[0x1912838] main input debug: Buffering 79%
+[0x1912838] main input debug: Buffering 85%
+[0x1912838] main input debug: Buffering 91%
+[0x1912838] main input debug: Buffering 98%
+[0x1912838] main input debug: Stream buffering done (680 ms in 1416 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+[0x1912838] main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 693 ms)
+[0x1912838] main input error: ES_OUT_RESET_PCR called
+[0x1912838] main input debug: Buffering 0%
+[0x1912838] main input debug: Buffering 5%
+[0x1912838] main input debug: Buffering 11%
+[0x1912838] main input debug: Buffering 17%
+[0x1912838] main input debug: Buffering 23%
+[0x1912838] main input debug: Buffering 28%
+[0x1912838] main input debug: Buffering 34%
+[0x1912838] main input debug: Buffering 40%
+[0x1912838] main input debug: Buffering 46%
+[0x1912838] main input debug: Buffering 51%
+[0x1912838] main input debug: Buffering 57%
+[0x1912838] main input debug: Buffering 63%
+[0x1912838] main input debug: Buffering 69%
+[0x1912838] main input debug: Buffering 74%
+[0x1912838] main input debug: Buffering 80%
+[0x1912838] main input debug: Buffering 86%
+[0x1912838] main input debug: Buffering 92%
+[0x1912838] main input debug: Buffering 98%
+[0x1912838] main input debug: Stream buffering done (720 ms in 1584 ms)
+[0x1912838] main input debug: Decoder buffering done in 0 ms
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

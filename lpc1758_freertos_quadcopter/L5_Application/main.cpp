@@ -24,7 +24,7 @@ int main(void)
     esc_initialize();
     scheduler_add_task(new PWMTask(10,PRIORITY_HIGH));
     scheduler_add_task(new BluetoothTask(100,PRIORITY_MEDIUM));
-    scheduler_add_task(new GyroTask(10,PRIORITY_MEDIUM));
+    scheduler_add_task(new GyroTask(50,PRIORITY_MEDIUM));
     scheduler_start(); ///< This shouldn't return
 
     return -1;

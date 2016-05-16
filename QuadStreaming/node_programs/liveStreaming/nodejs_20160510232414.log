@@ -1,0 +1,1687 @@
+listening on *:3000
+Command Received
+start
+
+Gyro Angles ---> Roll -1.429940 Pitch -1.692441
+Pid Output roll 0.000000 pitch 0.000000
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -2.631028 Pitch -0.559086
+Pid Output roll 0.000000 pitch 0.000000
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -13.789083 Pitch 16.054543
+Pid Output roll -0.020900 pitch 0.031500
+------- ESC Values -------
+ESC1: 7.531400
+ESC2: 7.511000
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll 4.457965 Pitch -13.787852
+Pid Output roll -0.001100 pitch -0.019900
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.521300
+ESC3: 7.519100
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -6.003137 Pitch 16.590094
+Pid Output roll -0.011400 pitch 0.031100
+------- ESC Values -------
+ESC1: 7.553600
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.509000
+
+Gyro Angles ---> Roll -25.197372 Pitch 7.421065
+Pid Output roll -0.054000 pitch 0.012100
+------- ESC Values -------
+ESC1: 7.556000
+ESC2: 7.532000
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -5.872571 Pitch 3.349340
+Pid Output roll -0.013700 pitch 0.002300
+------- ESC Values -------
+ESC1: 7.526400
+ESC2: 7.521800
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -21.206697 Pitch 24.052492
+Pid Output roll -0.045800 pitch 0.044100
+------- ESC Values -------
+ESC1: 7.569100
+ESC2: 7.502700
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -15.604792 Pitch -16.276262
+Pid Output roll -0.037400 pitch -0.027300
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.533600
+ESC3: 7.501400
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -1.203319 Pitch -1.725340
+Pid Output roll -0.006300 pitch 0.002800
+------- ESC Values -------
+ESC1: 7.510100
+ESC2: 7.503500
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -15.688704 Pitch 21.451380
+Pid Output roll -0.037300 pitch 0.044300
+------- ESC Values -------
+ESC1: 7.560400
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.507300
+
+Gyro Angles ---> Roll 2.866886 Pitch -13.243243
+Pid Output roll -0.006900 pitch -0.016600
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.523300
+ESC3: 7.510500
+ESC4: 7.500000
+
+Gyro Angles ---> Roll 10.685351 Pitch 5.955194
+Pid Output roll 0.014100 pitch 0.013600
+------- ESC Values -------
+ESC1: 7.510600
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.517400
+
+Gyro Angles ---> Roll -5.617949 Pitch 1.110736
+Pid Output roll -0.017000 pitch 0.003400
+------- ESC Values -------
+ESC1: 7.531300
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.518500
+
+Gyro Angles ---> Roll 9.761026 Pitch 5.407618
+Pid Output roll 0.003700 pitch 0.014800
+------- ESC Values -------
+ESC1: 7.511100
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.519300
+
+Gyro Angles ---> Roll -2.761581 Pitch -10.361317
+Pid Output roll -0.006000 pitch -0.016000
+------- ESC Values -------
+ESC1: 7.510700
+ESC2: 7.501300
+ESC3: 7.500000
+ESC4: 7.500000
+Command Received
+up
+
+Gyro Angles ---> Roll -0.487248 Pitch 3.414341
+Pid Output roll -0.006300 pitch 0.004700
+------- ESC Values -------
+ESC1: 7.500000
+ESC2: 7.500000
+ESC3: 7.500000
+ESC4: 7.509400
+
+Gyro Angles ---> Roll -14.024832 Pitch -1.901975
+Pid Output roll -0.026800 pitch 0.005000
+------- ESC Values -------
+ESC1: 7.521100
+ESC2: 7.512100
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -9.783607 Pitch -11.702079
+Pid Output roll -0.017000 pitch -0.016000
+------- ESC Values -------
+ESC1: 7.511600
+ESC2: 7.522200
+ESC3: 7.500000
+ESC4: 7.500000
+
+Gyro Angles ---> Roll -12.403626 Pitch 19.257698
+Pid Output roll -0.028100 pitch 0.035600
+------- ESC Values -------
+ESC1: 7.791700
+ESC2: 7.742100
+ESC3: 7.708300
+ESC4: 7.757900
+
+Gyro Angles ---> Roll 1.385042 Pitch -10.782459
+Pid Output roll -0.007600 pitch -0.015400
+------- ESC Values -------
+ESC1: 7.741900
+ESC2: 7.773300
+ESC3: 7.758100
+ESC4: 7.726700
+
+Gyro Angles ---> Roll 0.940385 Pitch -1.123980
+Pid Output roll -0.008000 pitch 0.004500
+------- ESC Values -------
+ESC1: 7.730000
+ESC2: 7.764000
+ESC3: 7.770000
+ESC4: 7.735900
+
+Gyro Angles ---> Roll 5.790546 Pitch 4.829000
+Pid Output roll 0.002000 pitch 0.003600
+------- ESC Values -------
+ESC1: 7.739200
+ESC2: 7.733000
+ESC3: 7.760800
+ESC4: 7.767000
+
+Gyro Angles ---> Roll 3.268941 Pitch -11.681833
+Pid Output roll -0.007100 pitch -0.017100
+------- ESC Values -------
+ESC1: 7.739700
+ESC2: 7.754500
+ESC3: 7.760300
+ESC4: 7.745500
+
+Gyro Angles ---> Roll 14.197730 Pitch 5.884476
+Pid Output roll 0.014100 pitch 0.013500
+------- ESC Values -------
+ESC1: 7.718000
+ESC2: 7.732200
+ESC3: 7.782000
+ESC4: 7.767800
+
+Gyro Angles ---> Roll 5.120454 Pitch 6.644485
+Pid Output roll 0.005100 pitch 0.012500
+------- ESC Values -------
+ESC1: 7.800400
+ESC2: 7.731600
+ESC3: 7.699600
+ESC4: 7.768400
+
+Gyro Angles ---> Roll -11.388068 Pitch -3.151959
+Pid Output roll -0.026900 pitch 0.003700
+------- ESC Values -------
+ESC1: 7.779400
+ESC2: 7.753000
+ESC3: 7.720600
+ESC4: 7.747000
+
+Gyro Angles ---> Roll 3.700869 Pitch 1.173589
+Pid Output roll -0.006900 pitch 0.004100
+------- ESC Values -------
+ESC1: 7.740000
+ESC2: 7.772800
+ESC3: 7.760000
+ESC4: 7.727200
+
+Gyro Angles ---> Roll -7.386350 Pitch 14.383179
+Pid Output roll -0.017700 pitch 0.024300
+------- ESC Values -------
+ESC1: 7.770700
+ESC2: 7.742500
+ESC3: 7.729300
+ESC4: 7.757500
+
+Gyro Angles ---> Roll -3.961934 Pitch 13.871723
+Pid Output roll -0.007400 pitch 0.024900
+------- ESC Values -------
+ESC1: 7.782100
+ESC2: 7.732700
+ESC3: 7.717900
+ESC4: 7.767300
+Command Received
+up
+
+Gyro Angles ---> Roll -16.390490 Pitch -7.376101
+Pid Output roll -0.038200 pitch -0.005100
+------- ESC Values -------
+ESC1: 7.814400
+ESC2: 7.824400
+ESC3: 7.685600
+ESC4: 7.675600
+
+Gyro Angles ---> Roll -1.466466 Pitch -4.213000
+Pid Output roll -0.009400 pitch 0.004500
+------- ESC Values -------
+ESC1: 7.775400
+ESC2: 7.765400
+ESC3: 7.724600
+ESC4: 7.734600
+
+Gyro Angles ---> Roll -1.943977 Pitch 8.625731
+Pid Output roll -0.009800 pitch 0.015600
+------- ESC Values -------
+ESC1: 7.794800
+ESC2: 7.785800
+ESC3: 7.705200
+ESC4: 7.714200
+
+Gyro Angles ---> Roll -19.506746 Pitch 4.263321
+Pid Output roll -0.042100 pitch 0.005500
+------- ESC Values -------
+ESC1: 8.037800
+ESC2: 8.048700
+ESC3: 7.962200
+ESC4: 7.951200
+
+Gyro Angles ---> Roll -10.294459 Pitch 0.347107
+Pid Output roll -0.033200 pitch 0.004800
+------- ESC Values -------
+ESC1: 8.027700
+ESC2: 8.017100
+ESC3: 7.972200
+ESC4: 7.982700
+
+Gyro Angles ---> Roll 9.288360 Pitch -3.514121
+Pid Output roll -0.002200 pitch 0.004900
+------- ESC Values -------
+ESC1: 8.017700
+ESC2: 8.007900
+ESC3: 7.982300
+ESC4: 7.992100
+
+Gyro Angles ---> Roll -11.670483 Pitch -9.056396
+Pid Output roll -0.034100 pitch -0.005500
+------- ESC Values -------
+ESC1: 8.016900
+ESC2: 8.007800
+ESC3: 7.983000
+ESC4: 7.992100
+
+Gyro Angles ---> Roll -6.537514 Pitch -10.993127
+Pid Output roll -0.024200 pitch -0.015800
+------- ESC Values -------
+ESC1: 8.028400
+ESC2: 8.039600
+ESC3: 7.971500
+ESC4: 7.960300
+
+Gyro Angles ---> Roll -6.989759 Pitch 17.094873
+Pid Output roll -0.025900 pitch 0.035600
+------- ESC Values -------
+ESC1: 8.050600
+ESC2: 7.979000
+ESC3: 7.949400
+ESC4: 8.021000
+
+Gyro Angles ---> Roll 10.943871 Pitch -8.750642
+Pid Output roll 0.004700 pitch -0.004800
+------- ESC Values -------
+ESC1: 7.979800
+ESC2: 7.968200
+ESC3: 8.020200
+ESC4: 8.031800
+
+Gyro Angles ---> Roll -17.354124 Pitch -24.567627
+Pid Output roll -0.045700 pitch -0.035800
+------- ESC Values -------
+ESC1: 7.999000
+ESC2: 8.090800
+ESC3: 8.001000
+ESC4: 7.909200
+
+Gyro Angles ---> Roll -9.505116 Pitch -2.226399
+Pid Output roll -0.026000 pitch 0.003300
+------- ESC Values -------
+ESC1: 8.019700
+ESC2: 8.013100
+ESC3: 7.980300
+ESC4: 7.986900
+
+Gyro Angles ---> Roll -14.285791 Pitch -7.050916
+Pid Output roll -0.035900 pitch -0.006800
+------- ESC Values -------
+ESC1: 8.029500
+ESC2: 8.063900
+ESC3: 7.970500
+ESC4: 7.936100
+
+Gyro Angles ---> Roll 0.000000 Pitch 32.000019
+Pid Output roll -0.015800 pitch 0.065000
+------- ESC Values -------
+ESC1: 8.112200
+ESC2: 8.003400
+ESC3: 7.887800
+ESC4: 7.996600
+Command Received
+up
+
+Gyro Angles ---> Roll 15.396285 Pitch -11.311352
+Pid Output roll 0.013600 pitch -0.016100
+------- ESC Values -------
+ESC1: 7.980800
+ESC2: 7.992600
+ESC3: 8.019200
+ESC4: 8.007400
+
+Gyro Angles ---> Roll 11.177635 Pitch -20.538261
+Pid Output roll 0.004300 pitch -0.037500
+------- ESC Values -------
+ESC1: 7.969300
+ESC2: 8.042500
+ESC3: 8.030700
+ESC4: 7.957500
+
+Gyro Angles ---> Roll 26.652941 Pitch -1.072752
+Pid Output roll 0.035900 pitch 0.002600
+------- ESC Values -------
+ESC1: 7.976700
+ESC2: 7.972500
+ESC3: 8.023300
+ESC4: 8.027500
+
+Gyro Angles ---> Roll -19.923891 Pitch -17.562029
+Pid Output roll -0.045700 pitch -0.028600
+------- ESC Values -------
+ESC1: 8.246600
+ESC2: 8.303200
+ESC3: 8.253400
+ESC4: 8.196700
+
+Gyro Angles ---> Roll -13.931118 Pitch -22.000872
+Pid Output roll -0.036700 pitch -0.040700
+------- ESC Values -------
+ESC1: 8.225200
+ESC2: 8.304800
+ESC3: 8.274700
+ESC4: 8.195200
+
+Gyro Angles ---> Roll 4.692552 Pitch -5.835597
+Pid Output roll -0.015300 pitch -0.011800
+------- ESC Values -------
+ESC1: 8.276600
+ESC2: 8.277000
+ESC3: 8.223400
+ESC4: 8.222900
+
+Gyro Angles ---> Roll -0.352218 Pitch 0.742641
+Pid Output roll -0.015600 pitch -0.001100
+------- ESC Values -------
+ESC1: 8.264000
+ESC2: 8.288200
+ESC3: 8.236000
+ESC4: 8.211800
+
+Gyro Angles ---> Roll 1.820489 Pitch -2.415752
+Pid Output roll -0.016500 pitch -0.001600
+------- ESC Values -------
+ESC1: 8.253800
+ESC2: 8.257100
+ESC3: 8.246100
+ESC4: 8.242900
+
+Gyro Angles ---> Roll -1.524041 Pitch -13.645879
+Pid Output roll -0.016000 pitch -0.023200
+------- ESC Values -------
+ESC1: 8.254000
+ESC2: 8.257900
+ESC3: 8.246000
+ESC4: 8.242000
+
+Gyro Angles ---> Roll -8.311486 Pitch -6.917655
+Pid Output roll -0.026700 pitch -0.013400
+------- ESC Values -------
+ESC1: 8.252300
+ESC2: 8.257900
+ESC3: 8.247700
+ESC4: 8.242100
+
+Gyro Angles ---> Roll -3.500905 Pitch -2.288260
+Pid Output roll -0.016500 pitch -0.002800
+------- ESC Values -------
+ESC1: 8.252200
+ESC2: 8.258700
+ESC3: 8.247800
+ESC4: 8.241200
+
+Gyro Angles ---> Roll -7.665879 Pitch -5.852252
+Pid Output roll -0.027100 pitch -0.013100
+------- ESC Values -------
+ESC1: 8.263500
+ESC2: 8.290500
+ESC3: 8.236500
+ESC4: 8.209400
+
+Gyro Angles ---> Roll -9.887068 Pitch -11.869822
+Pid Output roll -0.028300 pitch -0.024600
+------- ESC Values -------
+ESC1: 8.273300
+ESC2: 8.280100
+ESC3: 8.226700
+ESC4: 8.219900
+
+Gyro Angles ---> Roll -7.727963 Pitch -2.759877
+Pid Output roll -0.028700 pitch -0.003500
+------- ESC Values -------
+ESC1: 8.264600
+ESC2: 8.293600
+ESC3: 8.235300
+ESC4: 8.206400
+
+Gyro Angles ---> Roll -1.346857 Pitch 1.137389
+Pid Output roll -0.018800 pitch -0.003900
+------- ESC Values -------
+ESC1: 8.264900
+ESC2: 8.272600
+ESC3: 8.235100
+ESC4: 8.227300
+
+Gyro Angles ---> Roll -15.399660 Pitch 8.425171
+Pid Output roll -0.050200 pitch 0.007200
+------- ESC Values -------
+ESC1: 8.285000
+ESC2: 8.294800
+ESC3: 8.215000
+ESC4: 8.205200
+
+Gyro Angles ---> Roll -7.390306 Pitch 4.076054
+Pid Output roll -0.029300 pitch -0.003000
+------- ESC Values -------
+ESC1: 8.308200
+ESC2: 8.314200
+ESC3: 8.191800
+ESC4: 8.185700
+
+Gyro Angles ---> Roll -5.211941 Pitch -4.183477
+Pid Output roll -0.031800 pitch -0.003100
+------- ESC Values -------
+ESC1: 8.267000
+ESC2: 8.273300
+ESC3: 8.232900
+ESC4: 8.226700
+
+Gyro Angles ---> Roll 1.179325 Pitch 0.349680
+Pid Output roll -0.020700 pitch -0.002600
+------- ESC Values -------
+ESC1: 8.268500
+ESC2: 8.316800
+ESC3: 8.231400
+ESC4: 8.183200
+
+Gyro Angles ---> Roll 0.957518 Pitch -3.754007
+Pid Output roll -0.021700 pitch -0.003500
+------- ESC Values -------
+ESC1: 8.268200
+ESC2: 8.275200
+ESC3: 8.231800
+ESC4: 8.224800
+
+Gyro Angles ---> Roll -20.196802 Pitch 8.326097
+Pid Output roll -0.063100 pitch 0.007300
+------- ESC Values -------
+ESC1: 8.299900
+ESC2: 8.307500
+ESC3: 8.200100
+ESC4: 8.192400
+
+Gyro Angles ---> Roll -2.502499 Pitch 7.713875
+Pid Output roll -0.022800 pitch 0.007400
+------- ESC Values -------
+ESC1: 8.269100
+ESC2: 8.274500
+ESC3: 8.230900
+ESC4: 8.225500
+
+Gyro Angles ---> Roll 1.002370 Pitch 1.459926
+Pid Output roll -0.023800 pitch -0.002600
+------- ESC Values -------
+ESC1: 8.258600
+ESC2: 8.265900
+ESC3: 8.241300
+ESC4: 8.234100
+
+Gyro Angles ---> Roll 0.831699 Pitch 3.673885
+Pid Output roll -0.023000 pitch -0.002400
+------- ESC Values -------
+ESC1: 8.281000
+ESC2: 8.285900
+ESC3: 8.218900
+ESC4: 8.214100
+
+Gyro Angles ---> Roll 17.296429 Pitch 13.532624
+Pid Output roll 0.008100 pitch 0.018800
+------- ESC Values -------
+ESC1: 8.260800
+ESC2: 8.264600
+ESC3: 8.239200
+ESC4: 8.235400
+
+Gyro Angles ---> Roll 11.610206 Pitch 4.277216
+Pid Output roll -0.001900 pitch -0.002600
+------- ESC Values -------
+ESC1: 8.260500
+ESC2: 8.222700
+ESC3: 8.239500
+ESC4: 8.277300
+
+Gyro Angles ---> Roll 3.236034 Pitch 5.454814
+Pid Output roll -0.021700 pitch 0.008300
+------- ESC Values -------
+ESC1: 8.269900
+ESC2: 8.231500
+ESC3: 8.230100
+ESC4: 8.268500
+
+Gyro Angles ---> Roll -3.325825 Pitch 9.524537
+Pid Output roll -0.020400 pitch 0.009700
+------- ESC Values -------
+ESC1: 8.289400
+ESC2: 8.291300
+ESC3: 8.210500
+ESC4: 8.208700
+
+Gyro Angles ---> Roll -19.096260 Pitch 3.993335
+Pid Output roll -0.052100 pitch -0.000700
+------- ESC Values -------
+ESC1: 8.312100
+ESC2: 8.313500
+ESC3: 8.187800
+ESC4: 8.186400
+
+Gyro Angles ---> Roll -13.523170 Pitch -0.623782
+Pid Output roll -0.044500 pitch -0.001100
+------- ESC Values -------
+ESC1: 8.282700
+ESC2: 8.262900
+ESC3: 8.217200
+ESC4: 8.237100
+
+Gyro Angles ---> Roll -17.147558 Pitch -3.678655
+Pid Output roll -0.055400 pitch -0.000500
+------- ESC Values -------
+ESC1: 8.282600
+ESC2: 8.304600
+ESC3: 8.217300
+ESC4: 8.195400
+Command Received
+up
+
+Gyro Angles ---> Roll -4.933536 Pitch -0.459649
+Pid Output roll -0.024600 pitch -0.001000
+------- ESC Values -------
+ESC1: 8.295000
+ESC2: 8.297100
+ESC3: 8.204900
+ESC4: 8.202900
+
+Gyro Angles ---> Roll -14.422485 Pitch 1.237626
+Pid Output roll -0.047000 pitch -0.001000
+------- ESC Values -------
+ESC1: 8.274300
+ESC2: 8.276300
+ESC3: 8.225700
+ESC4: 8.223600
+
+Gyro Angles ---> Roll -3.317300 Pitch 6.718428
+Pid Output roll -0.025900 pitch 0.009800
+------- ESC Values -------
+ESC1: 8.295600
+ESC2: 8.297200
+ESC3: 8.204400
+ESC4: 8.202800
+
+Gyro Angles ---> Roll -9.499867 Pitch -1.288727
+Pid Output roll -0.037900 pitch -0.001100
+------- ESC Values -------
+ESC1: 8.286700
+ESC2: 8.266900
+ESC3: 8.213300
+ESC4: 8.233100
+
+Gyro Angles ---> Roll -6.605837 Pitch -8.827864
+Pid Output roll -0.038200 pitch -0.011300
+------- ESC Values -------
+ESC1: 8.537300
+ESC2: 8.537800
+ESC3: 8.462600
+ESC4: 8.462200
+
+Gyro Angles ---> Roll -10.772283 Pitch -9.726085
+Pid Output roll -0.049500 pitch -0.011800
+------- ESC Values -------
+ESC1: 8.548600
+ESC2: 8.547900
+ESC3: 8.451400
+ESC4: 8.452000
+
+Gyro Angles ---> Roll 7.169055 Pitch -12.951777
+Pid Output roll -0.019100 pitch -0.023300
+------- ESC Values -------
+ESC1: 8.528100
+ESC2: 8.531300
+ESC3: 8.471900
+ESC4: 8.468600
+
+Gyro Angles ---> Roll 5.052808 Pitch -7.038379
+Pid Output roll -0.019400 pitch -0.012200
+------- ESC Values -------
+ESC1: 8.485900
+ESC2: 8.574000
+ESC3: 8.514100
+ESC4: 8.425900
+
+Gyro Angles ---> Roll 2.773185 Pitch 5.249077
+Pid Output roll -0.029400 pitch 0.006800
+------- ESC Values -------
+ESC1: 8.526100
+ESC2: 8.532600
+ESC3: 8.473900
+ESC4: 8.467300
+Command Received
+up
+
+Gyro Angles ---> Roll -20.305676 Pitch 1.162906
+Pid Output roll -0.071100 pitch -0.003700
+------- ESC Values -------
+ESC1: 8.556400
+ESC2: 8.542900
+ESC3: 8.443500
+ESC4: 8.457100
+
+Gyro Angles ---> Roll -8.206763 Pitch -0.666610
+Pid Output roll -0.040000 pitch -0.003600
+------- ESC Values -------
+ESC1: 8.558300
+ESC2: 8.564500
+ESC3: 8.441700
+ESC4: 8.435400
+
+Gyro Angles ---> Roll -18.637796 Pitch 3.617982
+Pid Output roll -0.061700 pitch -0.003400
+------- ESC Values -------
+ESC1: 8.559000
+ESC2: 8.565800
+ESC3: 8.441000
+ESC4: 8.434200
+
+Gyro Angles ---> Roll -0.350398 Pitch -10.973839
+Pid Output roll -0.032800 pitch -0.024400
+------- ESC Values -------
+ESC1: 8.767600
+ESC2: 8.794900
+ESC3: 8.732400
+ESC4: 8.705000
+
+Gyro Angles ---> Roll -3.284742 Pitch -2.405338
+Pid Output roll -0.032600 pitch -0.003500
+------- ESC Values -------
+ESC1: 8.768100
+ESC2: 8.817000
+ESC3: 8.731900
+ESC4: 8.682900
+
+Gyro Angles ---> Roll 16.612438 Pitch 14.069230
+Pid Output roll -0.001900 pitch 0.016500
+------- ESC Values -------
+ESC1: 8.778500
+ESC2: 8.766900
+ESC3: 8.721400
+ESC4: 8.733100
+
+Gyro Angles ---> Roll -4.882712 Pitch 14.238589
+Pid Output roll -0.032800 pitch 0.017200
+------- ESC Values -------
+ESC1: 8.800800
+ESC2: 8.786800
+ESC3: 8.699200
+ESC4: 8.713200
+
+Gyro Angles ---> Roll 7.990114 Pitch 27.644087
+Pid Output roll -0.023200 pitch 0.049000
+------- ESC Values -------
+ESC1: 8.801800
+ESC2: 8.723800
+ESC3: 8.698200
+ESC4: 8.776100
+
+Gyro Angles ---> Roll -39.902145 Pitch -6.424515
+Pid Output roll -0.105200 pitch -0.012200
+------- ESC Values -------
+ESC1: 8.875300
+ESC2: 8.878600
+ESC3: 8.624600
+ESC4: 8.621400
+
+Gyro Angles ---> Roll -0.404571 Pitch 14.312116
+Pid Output roll -0.035700 pitch 0.019300
+------- ESC Values -------
+ESC1: 8.827300
+ESC2: 8.788100
+ESC3: 8.672700
+ESC4: 8.711900
+
+Gyro Angles ---> Roll -12.023892 Pitch -14.044653
+Pid Output roll -0.057200 pitch -0.021200
+------- ESC Values -------
+ESC1: 8.775500
+ESC2: 8.818400
+ESC3: 8.724500
+ESC4: 8.681500
+
+Gyro Angles ---> Roll 3.626588 Pitch -11.931004
+Pid Output roll -0.036000 pitch -0.022400
+------- ESC Values -------
+ESC1: 8.816300
+ESC2: 8.838700
+ESC3: 8.683600
+ESC4: 8.661300
+
+Gyro Angles ---> Roll 6.266551 Pitch -7.784147
+Pid Output roll -0.027600 pitch -0.012000
+------- ESC Values -------
+ESC1: 8.723800
+ESC2: 8.769600
+ESC3: 8.776100
+ESC4: 8.730400
+
+Gyro Angles ---> Roll -34.881706 Pitch -15.441606
+Pid Output roll -0.098700 pitch -0.033800
+------- ESC Values -------
+ESC1: 8.815100
+ESC2: 8.862100
+ESC3: 8.684900
+ESC4: 8.637800
+
+Gyro Angles ---> Roll -18.654703 Pitch -4.245267
+Pid Output roll -0.069500 pitch -0.003100
+------- ESC Values -------
+ESC1: 8.774600
+ESC2: 8.802800
+ESC3: 8.725400
+ESC4: 8.697200
+
+Gyro Angles ---> Roll 16.141817 Pitch 13.002793
+Pid Output roll -0.006800 pitch 0.017200
+------- ESC Values -------
+ESC1: 8.794600
+ESC2: 8.781600
+ESC3: 8.705300
+ESC4: 8.718400
+
+Gyro Angles ---> Roll -5.357930 Pitch 6.328484
+Pid Output roll -0.049600 pitch 0.007300
+------- ESC Values -------
+ESC1: 8.785700
+ESC2: 8.792200
+ESC3: 8.714300
+ESC4: 8.707700
+
+Gyro Angles ---> Roll 11.437365 Pitch 16.244146
+Pid Output roll -0.019300 pitch 0.028700
+------- ESC Values -------
+ESC1: 8.743800
+ESC2: 8.730100
+ESC3: 8.756100
+ESC4: 8.769900
+
+Gyro Angles ---> Roll 15.026593 Pitch 12.897422
+Pid Output roll -0.006400 pitch 0.018600
+------- ESC Values -------
+ESC1: 8.795100
+ESC2: 8.759200
+ESC3: 8.704900
+ESC4: 8.740700
+
+Gyro Angles ---> Roll -27.945892 Pitch -6.296016
+Pid Output roll -0.088700 pitch -0.011700
+------- ESC Values -------
+ESC1: 8.818100
+ESC2: 8.841200
+ESC3: 8.681900
+ESC4: 8.658700
+
+Gyro Angles ---> Roll -17.865156 Pitch -24.718283
+Pid Output roll -0.069600 pitch -0.043100
+------- ESC Values -------
+ESC1: 8.808600
+ESC2: 8.873900
+ESC3: 8.691300
+ESC4: 8.626000
+
+Gyro Angles ---> Roll -23.706127 Pitch 10.041396
+Pid Output roll -0.082500 pitch 0.017700
+------- ESC Values -------
+ESC1: 8.851100
+ESC2: 8.815100
+ESC3: 8.648900
+ESC4: 8.684800
+
+Gyro Angles ---> Roll -0.060639 Pitch 2.419530
+Pid Output roll -0.042900 pitch -0.002100
+------- ESC Values -------
+ESC1: 8.789800
+ESC2: 8.795000
+ESC3: 8.710100
+ESC4: 8.705000
+
+Gyro Angles ---> Roll -17.264856 Pitch -4.115237
+Pid Output roll -0.073600 pitch -0.001500
+------- ESC Values -------
+ESC1: 8.790800
+ESC2: 8.836800
+ESC3: 8.709200
+ESC4: 8.663200
+
+Gyro Angles ---> Roll -16.346670 Pitch -18.438210
+Pid Output roll -0.073800 pitch -0.033200
+------- ESC Values -------
+ESC1: 8.779000
+ESC2: 8.867900
+ESC3: 8.720900
+ESC4: 8.632100
+
+Gyro Angles ---> Roll 2.114105 Pitch 19.482218
+Pid Output roll -0.044800 pitch 0.027100
+------- ESC Values -------
+ESC1: 8.831500
+ESC2: 8.776000
+ESC3: 8.668400
+ESC4: 8.724000
+
+Gyro Angles ---> Roll -16.979797 Pitch 8.111780
+Pid Output roll -0.076200 pitch 0.007900
+------- ESC Values -------
+ESC1: 8.813700
+ESC2: 8.819000
+ESC3: 8.686300
+ESC4: 8.680900
+
+Gyro Angles ---> Roll -20.729744 Pitch -14.342738
+Pid Output roll -0.088300 pitch -0.023000
+------- ESC Values -------
+ESC1: 8.782100
+ESC2: 8.850600
+ESC3: 8.717900
+ESC4: 8.649300
+
+Gyro Angles ---> Roll -8.969361 Pitch 1.908971
+Pid Output roll -0.058600 pitch -0.004200
+------- ESC Values -------
+ESC1: 8.793800
+ESC2: 8.802200
+ESC3: 8.706200
+ESC4: 8.697800
+
+Gyro Angles ---> Roll -16.870588 Pitch -2.743370
+Pid Output roll -0.079600 pitch -0.003400
+------- ESC Values -------
+ESC1: 8.813300
+ESC2: 8.863200
+ESC3: 8.686600
+ESC4: 8.636800
+
+Gyro Angles ---> Roll -26.943211 Pitch 8.304251
+Pid Output roll -0.103600 pitch 0.005800
+------- ESC Values -------
+ESC1: 8.795800
+ESC2: 8.805400
+ESC3: 8.704200
+ESC4: 8.694600
+
+Gyro Angles ---> Roll -6.075385 Pitch 4.069723
+Pid Output roll -0.061900 pitch -0.004900
+------- ESC Values -------
+ESC1: 8.806400
+ESC2: 8.795200
+ESC3: 8.693600
+ESC4: 8.704800
+
+Gyro Angles ---> Roll 9.800313 Pitch 3.776750
+Pid Output roll -0.040000 pitch -0.003800
+------- ESC Values -------
+ESC1: 8.806300
+ESC2: 8.794900
+ESC3: 8.693700
+ESC4: 8.705100
+
+Gyro Angles ---> Roll -0.490881 Pitch -8.129270
+Pid Output roll -0.050300 pitch -0.014400
+------- ESC Values -------
+ESC1: 8.797000
+ESC2: 8.804600
+ESC3: 8.703000
+ESC4: 8.695300
+
+Gyro Angles ---> Roll -1.032881 Pitch 2.505107
+Pid Output roll -0.050500 pitch -0.004600
+------- ESC Values -------
+ESC1: 8.815900
+ESC2: 8.824000
+ESC3: 8.684100
+ESC4: 8.675900
+
+Gyro Angles ---> Roll -2.413851 Pitch -3.796172
+Pid Output roll -0.051400 pitch -0.004600
+------- ESC Values -------
+ESC1: 8.796300
+ESC2: 8.806500
+ESC3: 8.703700
+ESC4: 8.693400
+
+Gyro Angles ---> Roll 15.793793 Pitch 11.437269
+Pid Output roll -0.020100 pitch 0.016600
+------- ESC Values -------
+ESC1: 8.796300
+ESC2: 8.785500
+ESC3: 8.703700
+ESC4: 8.714400
+
+Gyro Angles ---> Roll 9.837973 Pitch 15.539776
+Pid Output roll -0.040200 pitch 0.027700
+------- ESC Values -------
+ESC1: 8.808200
+ESC2: 8.774400
+ESC3: 8.691800
+ESC4: 8.725600
+
+Gyro Angles ---> Roll 5.679372 Pitch 11.388844
+Pid Output roll -0.040000 pitch 0.018100
+------- ESC Values -------
+ESC1: 8.787000
+ESC2: 8.730200
+ESC3: 8.712900
+ESC4: 8.769800
+
+Gyro Angles ---> Roll 2.875632 Pitch -1.020643
+Pid Output roll -0.048900 pitch -0.001500
+------- ESC Values -------
+ESC1: 8.796900
+ESC2: 8.819900
+ESC3: 8.703100
+ESC4: 8.680000
+
+Gyro Angles ---> Roll -23.919992 Pitch -18.566423
+Pid Output roll -0.092000 pitch -0.033400
+------- ESC Values -------
+ESC1: 8.786000
+ESC2: 8.853200
+ESC3: 8.714000
+ESC4: 8.646800
+
+Gyro Angles ---> Roll -9.169922 Pitch -9.017921
+Pid Output roll -0.061700 pitch -0.013500
+------- ESC Values -------
+ESC1: 8.775700
+ESC2: 8.866500
+ESC3: 8.724200
+ESC4: 8.633500
+
+Gyro Angles ---> Roll -17.324116 Pitch -8.563311
+Pid Output roll -0.083600 pitch -0.015700
+------- ESC Values -------
+ESC1: 8.828700
+ESC2: 8.838900
+ESC3: 8.671300
+ESC4: 8.661000
+
+Gyro Angles ---> Roll -5.455986 Pitch 13.347612
+Pid Output roll -0.064400 pitch 0.015500
+------- ESC Values -------
+ESC1: 8.840600
+ESC2: 8.808900
+ESC3: 8.659400
+ESC4: 8.691000
+
+Gyro Angles ---> Roll -0.769424 Pitch 19.893938
+Pid Output roll -0.054100 pitch 0.027700
+------- ESC Values -------
+ESC1: 8.841400
+ESC2: 8.830700
+ESC3: 8.658500
+ESC4: 8.669300
+
+Gyro Angles ---> Roll 6.600277 Pitch 20.750151
+Pid Output roll -0.045800 pitch 0.038200
+------- ESC Values -------
+ESC1: 8.823100
+ESC2: 8.767600
+ESC3: 8.676800
+ESC4: 8.732400
+
+Gyro Angles ---> Roll -0.466226 Pitch 2.974704
+Pid Output roll -0.056900 pitch -0.002300
+------- ESC Values -------
+ESC1: 8.792600
+ESC2: 8.756200
+ESC3: 8.707400
+ESC4: 8.743800
+
+Gyro Angles ---> Roll 29.124559 Pitch 12.786892
+Pid Output roll -0.002800 pitch 0.019300
+------- ESC Values -------
+ESC1: 8.783900
+ESC2: 8.723700
+ESC3: 8.716100
+ESC4: 8.776200
+
+Gyro Angles ---> Roll -13.012085 Pitch -8.229167
+Pid Output roll -0.073200 pitch -0.010400
+------- ESC Values -------
+ESC1: 8.824200
+ESC2: 8.803800
+ESC3: 8.675800
+ESC4: 8.696100
+
+Gyro Angles ---> Roll -5.312762 Pitch 22.927711
+Pid Output roll -0.062900 pitch 0.041900
+------- ESC Values -------
+ESC1: 8.856300
+ESC2: 8.750200
+ESC3: 8.643700
+ESC4: 8.749700
+
+Gyro Angles ---> Roll 3.352570 Pitch 5.536297
+Pid Output roll -0.053500 pitch 0.013000
+------- ESC Values -------
+ESC1: 8.815400
+ESC2: 8.810500
+ESC3: 8.684600
+ESC4: 8.689400
+
+Gyro Angles ---> Roll -16.499886 Pitch -5.609455
+Pid Output roll -0.086400 pitch -0.008400
+------- ESC Values -------
+ESC1: 8.807300
+ESC2: 8.842900
+ESC3: 8.692700
+ESC4: 8.657100
+
+Gyro Angles ---> Roll -38.054031 Pitch -6.359477
+Pid Output roll -0.128700 pitch -0.009400
+------- ESC Values -------
+ESC1: 8.867200
+ESC2: 8.865800
+ESC3: 8.632800
+ESC4: 8.634200
+
+Gyro Angles ---> Roll -16.378130 Pitch -4.947144
+Pid Output roll -0.090700 pitch 0.000900
+------- ESC Values -------
+ESC1: 8.820300
+ESC2: 8.818400
+ESC3: 8.679700
+ESC4: 8.681500
+
+Gyro Angles ---> Roll -28.799911 Pitch 10.396481
+Pid Output roll -0.110200 pitch 0.020800
+------- ESC Values -------
+ESC1: 8.916300
+ESC2: 8.851100
+ESC3: 8.583600
+ESC4: 8.648900
+
+Gyro Angles ---> Roll -7.364573 Pitch 18.175869
+Pid Output roll -0.071900 pitch 0.033200
+------- ESC Values -------
+ESC1: 8.864700
+ESC2: 8.840900
+ESC3: 8.635300
+ESC4: 8.659000
+
+Gyro Angles ---> Roll -4.272274 Pitch -29.491083
+Pid Output roll -0.063800 pitch -0.049400
+------- ESC Values -------
+ESC1: 8.752900
+ESC2: 8.872700
+ESC3: 8.747100
+ESC4: 8.627200
+
+Gyro Angles ---> Roll 21.945375 Pitch 3.239057
+Pid Output roll -0.022800 pitch -0.000800
+------- ESC Values -------
+ESC1: 8.782900
+ESC2: 8.740400
+ESC3: 8.717100
+ESC4: 8.759500
+
+Gyro Angles ---> Roll -5.826297 Pitch -5.273438
+Pid Output roll -0.073000 pitch -0.010400
+------- ESC Values -------
+ESC1: 8.780500
+ESC2: 8.781200
+ESC3: 8.719400
+ESC4: 8.718700
+
+Gyro Angles ---> Roll 14.980619 Pitch 10.380097
+Pid Output roll -0.039900 pitch 0.021300
+------- ESC Values -------
+ESC1: 8.790200
+ESC2: 8.769900
+ESC3: 8.709800
+ESC4: 8.730000
+
+Gyro Angles ---> Roll 19.117170 Pitch 4.447740
+Pid Output roll -0.028500 pitch 0.000800
+------- ESC Values -------
+ESC1: 8.789100
+ESC2: 8.788500
+ESC3: 8.710800
+ESC4: 8.711500
+
+Gyro Angles ---> Roll -16.959738 Pitch 12.307600
+Pid Output roll -0.090700 pitch 0.021400
+------- ESC Values -------
+ESC1: 8.871600
+ESC2: 8.849200
+ESC3: 8.628400
+ESC4: 8.650800
+
+Gyro Angles ---> Roll -8.079092 Pitch 1.549139
+Pid Output roll -0.072900 pitch 0.001300
+------- ESC Values -------
+ESC1: 8.823600
+ESC2: 8.821000
+ESC3: 8.676400
+ESC4: 8.679000
+
+Gyro Angles ---> Roll 16.817301 Pitch 8.769149
+Pid Output roll -0.031100 pitch 0.011800
+------- ESC Values -------
+ESC1: 8.804600
+ESC2: 8.801200
+ESC3: 8.695300
+ESC4: 8.698800
+
+Gyro Angles ---> Roll -17.289587 Pitch 2.238382
+Pid Output roll -0.093300 pitch 0.001800
+------- ESC Values -------
+ESC1: 8.865200
+ESC2: 8.861700
+ESC3: 8.634700
+ESC4: 8.638300
+
+Gyro Angles ---> Roll -23.028910 Pitch 18.899731
+Pid Output roll -0.106200 pitch 0.033000
+------- ESC Values -------
+ESC1: 8.858000
+ESC2: 8.813600
+ESC3: 8.642000
+ESC4: 8.686300
+
+Gyro Angles ---> Roll -33.253735 Pitch -7.693539
+Pid Output roll -0.127400 pitch -0.008200
+------- ESC Values -------
+ESC1: 8.859200
+ESC2: 8.854400
+ESC3: 8.640700
+ESC4: 8.645600
+
+Gyro Angles ---> Roll -37.554958 Pitch 1.904306
+Pid Output roll -0.141400 pitch 0.001900
+------- ESC Values -------
+ESC1: 8.860500
+ESC2: 8.814800
+ESC3: 8.639400
+ESC4: 8.685200
+
+Gyro Angles ---> Roll -8.638787 Pitch -15.129182
+Pid Output roll -0.080000 pitch -0.028400
+------- ESC Values -------
+ESC1: 8.790300
+ESC2: 8.826500
+ESC3: 8.709700
+ESC4: 8.673500
+
+Gyro Angles ---> Roll -22.637592 Pitch 6.770835
+Pid Output roll -0.110800 pitch 0.012600
+------- ESC Values -------
+ESC1: 8.831400
+ESC2: 8.827400
+ESC3: 8.668600
+ESC4: 8.672600
+
+Gyro Angles ---> Roll -2.334467 Pitch 5.760457
+Pid Output roll -0.068400 pitch 0.012900
+------- ESC Values -------
+ESC1: 8.852100
+ESC2: 8.848600
+ESC3: 8.647800
+ESC4: 8.651400
+
+Gyro Angles ---> Roll -25.892397 Pitch -19.295156
+Pid Output roll -0.122000 pitch -0.028400
+------- ESC Values -------
+ESC1: 8.813400
+ESC2: 8.890600
+ESC3: 8.686600
+ESC4: 8.609400
+
+Gyro Angles ---> Roll -23.431805 Pitch -5.413169
+Pid Output roll -0.112700 pitch -0.009600
+------- ESC Values -------
+ESC1: 8.863800
+ESC2: 8.862800
+ESC3: 8.636200
+ESC4: 8.637100
+
+Gyro Angles ---> Roll 2.635293 Pitch 13.226387
+Pid Output roll -0.072900 pitch 0.021200
+------- ESC Values -------
+ESC1: 8.854900
+ESC2: 8.810900
+ESC3: 8.645100
+ESC4: 8.689100
+
+Gyro Angles ---> Roll -16.192225 Pitch 7.353723
+Pid Output roll -0.105200 pitch 0.011000
+------- ESC Values -------
+ESC1: 8.855800
+ESC2: 8.791000
+ESC3: 8.644100
+ESC4: 8.709000
+
+Gyro Angles ---> Roll -1.550713 Pitch 11.320692
+Pid Output roll -0.074000 pitch 0.022900
+------- ESC Values -------
+ESC1: 8.816200
+ESC2: 8.790800
+ESC3: 8.683800
+ESC4: 8.709200
+
+Gyro Angles ---> Roll 13.454893 Pitch 12.117270
+Pid Output roll -0.051900 pitch 0.023800
+------- ESC Values -------
+ESC1: 8.835700
+ESC2: 8.809500
+ESC3: 8.664300
+ESC4: 8.690400
+
+Gyro Angles ---> Roll -21.840384 Pitch 12.442743
+Pid Output roll -0.115000 pitch 0.023500
+------- ESC Values -------
+ESC1: 8.887900
+ESC2: 8.778300
+ESC3: 8.612100
+ESC4: 8.721700
+
+Gyro Angles ---> Roll -35.112473 Pitch 5.418949
+Pid Output roll -0.144800 pitch 0.014900
+------- ESC Values -------
+ESC1: 8.923400
+ESC2: 8.870800
+ESC3: 8.576500
+ESC4: 8.629200
+
+Gyro Angles ---> Roll -25.562275 Pitch -1.446558
+Pid Output roll -0.129000 pitch 0.005200
+------- ESC Values -------
+ESC1: 8.851200
+ESC2: 8.840700
+ESC3: 8.648800
+ESC4: 8.659200
+
+Gyro Angles ---> Roll 12.830768 Pitch 12.927454
+Pid Output roll -0.055900 pitch 0.026500
+------- ESC Values -------
+ESC1: 8.852900
+ESC2: 8.802300
+ESC3: 8.647000
+ESC4: 8.697600
+
+Gyro Angles ---> Roll 9.136033 Pitch 16.510527
+Pid Output roll -0.066700 pitch 0.037900
+------- ESC Values -------
+ESC1: 8.854400
+ESC2: 8.799200
+ESC3: 8.645500
+ESC4: 8.700800
+
+Gyro Angles ---> Roll 13.735240 Pitch 13.926223
+Pid Output roll -0.056200 pitch 0.027800
+------- ESC Values -------
+ESC1: 8.887000
+ESC2: 8.767800
+ESC3: 8.613000
+ESC4: 8.732200
+
+Gyro Angles ---> Roll -32.844971 Pitch 14.404840
+Pid Output roll -0.139100 pitch 0.029500
+------- ESC Values -------
+ESC1: 8.962800
+ESC2: 8.880200
+ESC3: 8.537200
+ESC4: 8.619800
+
+Gyro Angles ---> Roll -5.093363 Pitch -3.775242
+Pid Output roll -0.092400 pitch 0.009700
+------- ESC Values -------
+ESC1: 8.872400
+ESC2: 8.832100
+ESC3: 8.627500
+ESC4: 8.667900
+
+Gyro Angles ---> Roll -6.922939 Pitch 5.900250
+Pid Output roll -0.092800 pitch 0.021000
+------- ESC Values -------
+ESC1: 8.884100
+ESC2: 8.863300
+ESC3: 8.615900
+ESC4: 8.636700
+
+Gyro Angles ---> Roll -10.991871 Pitch 18.676937
+Pid Output roll -0.105500 pitch 0.042100
+------- ESC Values -------
+ESC1: 8.865600
+ESC2: 8.803000
+ESC3: 8.634400
+ESC4: 8.696900
+
+Gyro Angles ---> Roll 4.322184 Pitch 21.351562
+Pid Output roll -0.085200 pitch 0.053500
+------- ESC Values -------
+ESC1: 8.887700
+ESC2: 8.781600
+ESC3: 8.612200
+ESC4: 8.718400
+
+Gyro Angles ---> Roll 0.648805 Pitch 20.311615
+Pid Output roll -0.085200 pitch 0.055800
+------- ESC Values -------
+ESC1: 8.890500
+ESC2: 8.799800
+ESC3: 8.609400
+ESC4: 8.700200
+
+Gyro Angles ---> Roll -7.623822 Pitch 21.492434
+Pid Output roll -0.095800 pitch 0.057100
+------- ESC Values -------
+ESC1: 8.881900
+ESC2: 8.790500
+ESC3: 8.618100
+ESC4: 8.709500
+
+Gyro Angles ---> Roll 17.767069 Pitch -1.767488
+Pid Output roll -0.054100 pitch 0.016800
+------- ESC Values -------
+ESC1: 8.810700
+ESC2: 8.777100
+ESC3: 8.689200
+ESC4: 8.722800
+
+Gyro Angles ---> Roll 16.453665 Pitch 2.254621
+Pid Output roll -0.052100 pitch 0.016800
+------- ESC Values -------
+ESC1: 8.850700
+ESC2: 8.776100
+ESC3: 8.649300
+ESC4: 8.723900
+
+Gyro Angles ---> Roll -33.318459 Pitch -4.392967
+Pid Output roll -0.144000 pitch 0.018100
+------- ESC Values -------
+ESC1: 8.903000
+ESC2: 8.866800
+ESC3: 8.597000
+ESC4: 8.633200
+
+Gyro Angles ---> Roll -21.313696 Pitch 4.279280
+Pid Output roll -0.124300 pitch 0.017700
+------- ESC Values -------
+ESC1: 8.936600
+ESC2: 8.898200
+ESC3: 8.563300
+ESC4: 8.601800
+
+Gyro Angles ---> Roll 18.804230 Pitch -21.656052
+Pid Output roll -0.054900 pitch -0.024700
+------- ESC Values -------
+ESC1: 8.833400
+ESC2: 8.840000
+ESC3: 8.666500
+ESC4: 8.660000
+
+Gyro Angles ---> Roll 17.505793 Pitch -6.067549
+Pid Output roll -0.054900 pitch 0.006400
+------- ESC Values -------
+ESC1: 8.790700
+ESC2: 8.799700
+ESC3: 8.709300
+ESC4: 8.700200
+
+Gyro Angles ---> Roll -20.499008 Pitch -8.206324
+Pid Output roll -0.125400 pitch 0.005100
+------- ESC Values -------
+ESC1: 8.871200
+ESC2: 8.859800
+ESC3: 8.628700
+ESC4: 8.640200
+
+Gyro Angles ---> Roll -10.431885 Pitch 8.227130
+Pid Output roll -0.105800 pitch 0.025100
+------- ESC Values -------
+ESC1: 8.911600
+ESC2: 8.839600
+ESC3: 8.588400
+ESC4: 8.660400
+
+Gyro Angles ---> Roll -5.928524 Pitch -3.481706
+Pid Output roll -0.097300 pitch 0.015700
+------- ESC Values -------
+ESC1: 8.862900
+ESC2: 8.810500
+ESC3: 8.637000
+ESC4: 8.689500
+
+Gyro Angles ---> Roll -9.497091 Pitch -27.342869
+Pid Output roll -0.098000 pitch -0.035800
+------- ESC Values -------
+ESC1: 8.811600
+ESC2: 8.863200
+ESC3: 8.688300
+ESC4: 8.636800
+
+Gyro Angles ---> Roll -8.187297 Pitch -9.820623
+Pid Output roll -0.098200 pitch 0.003400
+------- ESC Values -------
+ESC1: 8.842100
+ESC2: 8.813100
+ESC3: 8.657900
+ESC4: 8.686800
+
+Gyro Angles ---> Roll -4.587807 Pitch 11.665078
+Pid Output roll -0.086900 pitch 0.034800
+------- ESC Values -------
+ESC1: 8.893000
+ESC2: 8.843700
+ESC3: 8.607000
+ESC4: 8.656200
+
+Gyro Angles ---> Roll -9.786488 Pitch 3.924386
+Pid Output roll -0.098700 pitch 0.014500
+------- ESC Values -------
+ESC1: 8.894100
+ESC2: 8.865100
+ESC3: 8.605900
+ESC4: 8.634800
+
+Gyro Angles ---> Roll -15.361982 Pitch 5.270079
+Pid Output roll -0.121300 pitch 0.024900
+------- ESC Values -------
+ESC1: 8.875200
+ESC2: 8.844700
+ESC3: 8.624700
+ESC4: 8.655300
+
+Gyro Angles ---> Roll 13.994163 Pitch -7.127137
+Pid Output roll -0.070400 pitch 0.003900
+------- ESC Values -------
+ESC1: 8.845100
+ESC2: 8.796100
+ESC3: 8.654800
+ESC4: 8.703800
+
+Gyro Angles ---> Roll -3.739257 Pitch -20.685513
+Pid Output roll -0.090500 pitch -0.027100
+------- ESC Values -------
+ESC1: 8.824800
+ESC2: 8.816200
+ESC3: 8.675100
+ESC4: 8.683800
+
+Gyro Angles ---> Roll -17.671751 Pitch 13.921494
+Pid Output roll -0.121800 pitch 0.034500
+------- ESC Values -------
+ESC1: 8.915200
+ESC2: 8.845700
+ESC3: 8.584700
+ESC4: 8.654300
+
+Gyro Angles ---> Roll 8.011079 Pitch 3.094835
+Pid Output roll -0.081900 pitch 0.014700
+------- ESC Values -------
+ESC1: 8.867200
+ESC2: 8.837800
+ESC3: 8.632800
+ESC4: 8.662200
+
+Gyro Angles ---> Roll 13.928308 Pitch -7.609161
+Pid Output roll -0.072500 pitch 0.004300
+------- ESC Values -------
+ESC1: 8.816000
+ESC2: 8.787300
+ESC3: 8.683900
+ESC4: 8.712700
+
+Gyro Angles ---> Roll -31.299131 Pitch 19.178288
+Pid Output roll -0.155400 pitch 0.045600
+------- ESC Values -------
+ESC1: 8.928100
+ESC2: 8.835500
+ESC3: 8.571900
+ESC4: 8.664500
+
+Gyro Angles ---> Roll -10.498144 Pitch 3.193358
+Pid Output roll -0.116100 pitch 0.016100
+------- ESC Values -------
+ESC1: 8.892000
+ESC2: 8.860800
+ESC3: 8.608000
+ESC4: 8.639200
+
+Gyro Angles ---> Roll -40.849304 Pitch 10.583073
+Pid Output roll -0.179600 pitch 0.036800
+------- ESC Values -------
+ESC1: 8.957400
+ESC2: 8.863200
+ESC3: 8.542600
+ESC4: 8.636800
+
+Gyro Angles ---> Roll 4.197819 Pitch -32.935310
+Pid Output roll -0.098900 pitch -0.045200
+------- ESC Values -------
+ESC1: 8.804300
+ESC2: 8.874500
+ESC3: 8.695700
+ESC4: 8.625500
+
+Gyro Angles ---> Roll -18.394331 Pitch 1.207109
+Pid Output roll -0.129500 pitch 0.014800
+------- ESC Values -------
+ESC1: 8.915000
+ESC2: 8.863400
+ESC3: 8.585000
+ESC4: 8.636500
+
+Gyro Angles ---> Roll -36.012016 Pitch 22.064955
+Pid Output roll -0.173800 pitch 0.058000
+------- ESC Values -------
+ESC1: 8.886700
+ESC2: 8.835500
+ESC3: 8.613200
+ESC4: 8.664500
+
+Gyro Angles ---> Roll 1.518073 Pitch 26.378918
+Pid Output roll -0.101200 pitch 0.069500
+------- ESC Values -------
+ESC1: 8.908700
+ESC2: 8.771700
+ESC3: 8.591300
+ESC4: 8.728200
+
+Gyro Angles ---> Roll -0.011368 Pitch 23.721218
+Pid Output roll -0.100800 pitch 0.061300
+------- ESC Values -------
+ESC1: 8.921600
+ESC2: 8.779800
+ESC3: 8.578300
+ESC4: 8.720100
+
+Gyro Angles ---> Roll -35.218586 Pitch -13.205697
+Pid Output roll -0.172700 pitch 0.001600
+------- ESC Values -------
+ESC1: 8.944300
+ESC2: 8.963700
+ESC3: 8.555600
+ESC4: 8.536300
+
+Gyro Angles ---> Roll -25.160995 Pitch -24.455036
+Pid Output roll -0.158300 pitch -0.021700
+------- ESC Values -------
+ESC1: 8.875000
+ESC2: 8.874500
+ESC3: 8.625000
+ESC4: 8.625400
+
+Gyro Angles ---> Roll -16.988981 Pitch 2.237701
+Pid Output roll -0.139000 pitch 0.019400
+------- ESC Values -------
+ESC1: 8.917100
+ESC2: 8.858300
+ESC3: 8.582900
+ESC4: 8.641700
+
+Gyro Angles ---> Roll -14.425420 Pitch 20.502127
+Pid Output roll -0.128900 pitch 0.062400
+------- ESC Values -------
+ESC1: 8.950700
+ESC2: 8.870700
+ESC3: 8.549300
+ESC4: 8.629300
+
+Gyro Angles ---> Roll -17.887323 Pitch 26.916960
+Pid Output roll -0.141000 pitch 0.073300
+------- ESC Values -------
+ESC1: 8.996000
+ESC2: 8.869400
+ESC3: 8.504000
+ESC4: 8.630600
+Command Received
+stop
+
+Gyro Angles ---> Roll -2.635086 Pitch 0.846515
+Pid Output roll -0.112400 pitch 0.022500
+------- ESC Values -------
+ESC1: 8.906800
+ESC2: 8.860900
+ESC3: 8.593100
+ESC4: 8.639100
+
+Gyro Angles ---> Roll -6.236377 Pitch 5.782721
+Pid Output roll -0.124500 pitch 0.032800
+------- ESC Values -------
+ESC1: 8.884600
+ESC2: 8.840200
+ESC3: 8.615400
+ESC4: 8.659700
+
+Gyro Angles ---> Roll -12.412877 Pitch 14.363576
+Pid Output roll -0.135400 pitch 0.042700
+------- ESC Values -------
+ESC1: 8.947700
+ESC2: 8.799700
+ESC3: 8.552200
+ESC4: 8.700300

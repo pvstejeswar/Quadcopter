@@ -18,6 +18,7 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz)
     gyr_x = gyr_y = gyr_z = 0;
     roll = pitch = yaw = 0;
     mag_x = mag_y = mag_z = 0;
+    Filtered_pitch = Filtered_roll = 0;
     setRunDuration(taskRateHz);
 }
 
@@ -35,10 +36,10 @@ bool GyroTask::run(void*p )
     mag_x = IMU.M_getX() ;
     mag_y = IMU.M_getY() ;
     mag_z = IMU.M_getZ() ;
-    
+
     currtimer = sys_get_uptime_ms();
     float diff = currtimer - prevtimer;
-    
+
     /*Convert raw value to degree per second*/
     gyr_x = IMU.GS_getX()/ GYRO_CONST;
     gyr_y = IMU.GS_getY()/ GYRO_CONST;
@@ -62,13 +63,18 @@ bool GyroTask::run(void*p )
 
     qh = getSharedObject(IMUData);
     Orientation ori;
-    ori.pitch = pitch;
-    ori.roll = roll;
+    if(Filtered_roll - roll < 15 && Filtered_pitch - pitch < 15)
+    {
+        Filtered_pitch = 0.8*(Filtered_pitch) + 0.2*(pitch +1.05);
+        Filtered_roll = 0.8*(Filtered_roll) + 0.2*(roll - 8.10);
+    }
+    ori.pitch = Filtered_pitch;
+    ori.roll = Filtered_roll;
     ori.yaw  = 0;//yaw;
 
     if(!xQueueSend(qh, &ori,10))
     {
-      printf("--- Failed To Send Gyro Data ---");
+        printf("--- Failed To Send Gyro Data ---");
     }
 
 #if 0

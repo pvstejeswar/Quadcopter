@@ -11,9 +11,8 @@
 bool MPU_9255::init()
 {
 
-#if dheeraj
     //Configuring the accelerometer, GYRO sensitivity
-    const unsigned char accel_sens = (1 << 4) | (1 << 3);//Reg 28: 00010000 = 8g - 16 in decimal
+    const unsigned char accel_sens = (1 << 3);//(1 << 4) | (1 << 3);//Reg 28: 00010000 = 8g - 16 in decimal
     const unsigned char gyro_sens = (1 << 4);//Reg 28: 00010000 = 1000 dps - 16 in decimal
 
     //write that value to reg 28
@@ -21,12 +20,6 @@ bool MPU_9255::init()
     writeReg(GYRO_CONFIG, gyro_sens);
 
     //checking whether we are accessing our device
-    const char whoAmIReg = readReg(WHO_AM_I);
-
-    //if this gives 0x73 we are good
-    return (0x71 == whoAmIReg);//Don't know how it is 0x71. I checked by passing the reg address.
-#endif
-
     const char who_am_i = readReg(WHO_AM_I);
 
     if (who_am_i == 0x71) // WHO_AM_I should always be 0x68

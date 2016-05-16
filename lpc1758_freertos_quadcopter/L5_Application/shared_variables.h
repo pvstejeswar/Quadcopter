@@ -19,7 +19,7 @@
 
 #define GYRO_CONST 131.0f
 #define ACC_CONST 16384.0f
-#define GAINFACTOR 0.8f
+#define GAINFACTOR 0.9f
 
 typedef struct{
         double roll;
@@ -52,6 +52,7 @@ class GyroTask:public scheduler_task
         double  gyr_x, gyr_y, gyr_z;
         double  mag_x, mag_y, mag_z;
         double roll, pitch, yaw;
+        double Filtered_roll, Filtered_pitch;
 
     public:
         GyroTask(unsigned long rateHz, uint8_t priority);

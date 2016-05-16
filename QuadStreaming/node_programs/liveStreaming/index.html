@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJQUAD</title>
+<!-- Bootstrap CSS -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+.content1 {
+float:left;
+width:70%;
+
+}
+
+.content2{
+	float:right;
+	width:30%;
+	}
+
+	.buttons{
+		float:left;
+		}
+</style>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</head>
+<body class="container" ng-controller="myController">
+<h1 class="text-center">Quadcopter Surveillance
+<small>SJSU</small>
+</h1>
+<hr>
+<div>
+<div class="content1">
+<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"
+version="VideoLAN.VLCPlugin.2"
+width="640"
+height="480"
+id="vlc"
+</embed>
+</div>
+<div class="content2">
+
+Test
+
+
+</div>
+</div>
+<div class = "buttons">
+<button type="submit" id="" class="btn btn-info start" ng-model="start" ng-init='start="start"'ng-click="command(start)">Start</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='stop="stop"' ng-click="command(stop)">Stop</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="up" ng-init='up="up"' ng-click="command(up)">Up</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='down="down"' ng-click="command(down)">Down</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='left="left"' ng-click="command(left)">Left</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='right="right"' ng-click="command(right)">Right</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='forward="forward"' ng-click="command(forward)">Forward</button>
+<button type="submit" id="" class="btn btn-info start" ng-model="stop" ng-init='back="back"' ng-click="command(back)">Back</button>
+</div>
+
+
+</body>
+
+<script>
+var vlc = document.getElementById("vlc");
+vlc.playlist.add("rtsp://192.168.0.103:8554/", "live",
+":network-caching=150");
+vlc.playlist.play();
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script>
+var app=angular.module('myapp',[]);
+app.controller('myController',function($http,$scope)
+		{
+			
+		$scope.command=function(keyword){
+		//alert('clicked');
+		$http({
+			'method':'POST',
+			'url':'/start/'+keyword,
+			'data':{}
+			}).success(function(data){
+				//alert('success');
+				}).error(function(error){
+					alert('error');
+					});
+		};
+		});
+	
+</script>
+</body>
+</html>

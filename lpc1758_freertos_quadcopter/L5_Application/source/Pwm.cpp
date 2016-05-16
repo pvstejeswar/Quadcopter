@@ -11,10 +11,11 @@
 #include "time.h"
 #include <math.h>
 
-#define ESC_MAX 9.5
-#define ESC_MIN 7.5
+#define ESC_MAX 10.5
+#define ESC_MIN 8.5
 #define ESC_STOP 6
-
+#define FACTOR 10
+#define INCREMENT 0.25
 
 PWMTask::PWMTask(unsigned long rateHz, uint8_t priority) :
 scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
@@ -40,9 +41,9 @@ scheduler_task("pwm", 3 * 512, priority), taskRateHz(rateHz), pwm1(
 
     esc_1 = esc_2 = esc_3 = esc_4 = 0;
 
-    pid_p_gain_roll = pid_p_gain_pitch = 0.01;
-    pid_i_gain_roll = pid_i_gain_pitch = 0.0001;
-    pid_d_gain_roll = pid_d_gain_pitch = 0.0002;
+    pid_p_gain_roll = pid_p_gain_pitch = 0.05;
+    pid_i_gain_roll = pid_i_gain_pitch = 0.0005;
+    pid_d_gain_roll = pid_d_gain_pitch = 0.007;
 
     pid_p_gain_yaw = 4.0;
     pid_i_gain_yaw = 0.02;
@@ -84,6 +85,11 @@ bool PWMTask::run(void *p)
         {
             motorcmd(motordown);
         }
+        else if (strcmp("hover", command) == 0)
+        {
+            armed = false;
+            motorcmd(motorhover);
+        }
 
     }
 
@@ -108,10 +114,10 @@ bool PWMTask::run(void *p)
         esc_3 = pwm_throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;
         esc_4 = pwm_throttle + pid_output_pitch + pid_output_roll + pid_output_yaw;
 
-        esc_1 = floorf(esc_1 *100)/100;
-        esc_2 = floorf(esc_2 *100)/100;
-        esc_3 = floorf(esc_3 *100)/100;
-        esc_4 = floorf(esc_4 *100)/100;
+        esc_1 = roundf(esc_1 *100)/100;
+        esc_2 = roundf(esc_2 *100)/100;
+        esc_3 = roundf(esc_3 *100)/100;
+        esc_4 = roundf(esc_4 *100)/100;
 
         esc_1 = (esc_1 < ESC_MIN)?ESC_MIN:(esc_1>ESC_MAX)?ESC_MAX:esc_1;
         esc_2 = (esc_2 < ESC_MIN)?ESC_MIN:(esc_2>ESC_MAX)?ESC_MAX:esc_2;
@@ -134,26 +140,26 @@ bool PWMTask::run(void *p)
 
 void PWMTask::calculate_pid(){
     //Roll calculations
-    pid_error_temp = (int)(gyro_roll_input - pid_roll_setpoint)/5;
+    pid_error_temp = (int)(gyro_roll_input - pid_roll_setpoint)/FACTOR;
     pid_i_mem_roll += pid_i_gain_roll * pid_error_temp;
     pid_output_roll = pid_p_gain_roll * pid_error_temp + pid_i_mem_roll + pid_d_gain_roll * (pid_error_temp - pid_last_roll_d_error);
     pid_last_roll_d_error = pid_error_temp;
 
     //Pitch calculations
-    pid_error_temp = (int)(gyro_pitch_input - pid_pitch_setpoint)/5;
+    pid_error_temp = (int)(gyro_pitch_input - pid_pitch_setpoint)/FACTOR;
     pid_i_mem_pitch += pid_i_gain_pitch * pid_error_temp;
     pid_output_pitch = pid_p_gain_pitch * pid_error_temp + pid_i_mem_pitch + pid_d_gain_pitch * (pid_error_temp - pid_last_pitch_d_error);
     pid_last_pitch_d_error = pid_error_temp;
 
     //Yaw calculations
-    pid_error_temp = (int)(gyro_yaw_input - pid_yaw_setpoint)/5;
+    pid_error_temp = (int)(gyro_yaw_input - pid_yaw_setpoint)/FACTOR;
     pid_i_mem_yaw += pid_i_gain_yaw * pid_error_temp;
     pid_output_yaw = pid_p_gain_yaw * pid_error_temp + pid_i_mem_yaw + pid_d_gain_yaw * (pid_error_temp - pid_last_yaw_d_error);
     pid_last_yaw_d_error = pid_error_temp;
 
     printf("\n\nGyro Angles ---> Roll %lf Pitch %lf\n", gyro_roll_input, gyro_pitch_input);
     printf("Pid Output roll %lf pitch %lf\n",pid_output_roll,pid_output_pitch);
-
+#if 0
     static int i=0;
     if(i == 5)
     {
@@ -161,10 +167,11 @@ void PWMTask::calculate_pid(){
         u2.printf("\nGyro Angles ---> Roll %lf Pitch %lf\n", gyro_roll_input, gyro_pitch_input);
         u2.printf("Pid Output roll %lf pitch %lf\n",pid_output_roll,pid_output_pitch);
         u2.printf("------- ESC Values -------\nESC1: %f\nESC2: %f\nESC3: %f\nESC4: %f\n",
-                        esc_1,esc_2,esc_3,esc_4);
+                esc_1,esc_2,esc_3,esc_4);
         i=0;
     }
     i++;
+#endif
 }
 
 
@@ -187,14 +194,14 @@ void PWMTask::motorcmd(int cmd)
     }
     if (cmd == motorup)
     {
-        pwm_throttle+=0.25;
+        pwm_throttle+=INCREMENT;
         LE.setAll(0x9);
         return;
     }
 
     if (cmd == motordown)
     {
-        pwm_throttle-=0.25;
+        pwm_throttle-=INCREMENT;
         LE.setAll(0x6);
         return;
     }
